@@ -258,10 +258,13 @@ PHPFront
   * Template file extension is rightly .html
   * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
   Furthermore, if you know CSS, you can even target template elements by 
-  	- i id (`$PHPFront->assign('#element', '...'))`, 
-  	- ii ClassName (`$PHPFront->assign('.element', '...'))`, 
-  	- iii Attribute (`$PHPFront->assign('element[attr]', '...'))`.
+  	id (`$PHPFront->assign('#element', '...'))`,
+
+  	ClassName (`$PHPFront->assign('.element', '...'))`,
+
+  	Attribute (`$PHPFront->assign('element[attr]', '...'))`.
+
   And if you're a pro, find anything on the UI with xpath query: 
-  	- iv `$PHPFront->assign('xpath:parent/child', '...')`.
+  	`$PHPFront->assign('xpath:parent/child', '...')`.
 
 You should by now see the possibilities! See the [official documentation](https://ox-harris.github.io/phpfront/documentation/), and tutorials! 
