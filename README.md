@@ -148,147 +148,104 @@ GPL-3.0 - See LICENSE
   
 #### The template - after
 
-
-  \<html\>
-
-  \<head\>
-
-	\<title\>Info\</title\>
-
-  \</head\>
-
-  \<body\>
-
+```markup
+  <html>
+  <head>
+	<title>Info</title>
+  </head>
+  <body>
   
-	\<pre\>
-	
+	<pre>
 	  User Information:
-	
 	  Name: george smith
-	
 	  Address: 45th & Harris
+	</pre>
+
+  </body>
+  </html>
+  ```
   
-	\</pre\>
-
-
-  \</body\>
-
-  \</html\>
-
-
 ### PHPFront:
 
 #### The php
 
+  ```php
   include('PHPFront/lib/PHPFront.php');
 
-----------------
-
   // create object
-
   $PHPFront = new PHPFront;
 
-----------------
-
   // assign some content. This would typically come from
-
   // a database or other source, but we'll use static
-
   // values for the purpose of this example.
-
   $PHPFront->assign('#name::after', 'george smith');
-
   $PHPFront->assign('#address::after', '45th & Harris');
 
-----------------
-
   // display it
-
   $PHPFront->setTemplate('index.html');
-
   $PHPFront->render();
-
+  ```
   
 #### The template - before
 
-  \<html\>
-
-  \<head\>
-
-	\<title\>Info\</title\>
-
-  \</head\>
-
-  \<body\>
-
+  ```markup
+  <html>
+  <head>
+	<title>Info</title>
+  </head>
+  <body>
   
-	\<pre\>
-  
+	<pre>
 	  User Information:
-	
-	  \<span id="name"\>Name: \</span\>
-	
-	  \<span id="address"\>Address: \</span\>
+	  <span id="name">Name: </span>
+	  <span id="address">Address: </span>
+	</pre>
+
+  </body>
+  </html>
+  ```
   
-	\</pre\>
-  
-
-  \</body\>
-
-  \</html\>
-
 #### The template - after
 
-  \<html\>
-
-  \<head\>
-
-	\<title\>Info\</title\>
-
-  \</head\>
-
-  \<body\>
-
+  ```markup
+  <html>
+  <head>
+	<title>Info</title>
+  </head>
+  <body>
   
-	\<pre\>
-  
+	<pre>
 	  User Information:
-	
-	  \<span id="name"\>Name: george smith\</span\>
-	
-	  \<span id="address"\>Address: 45th & Harris\</span\>
-  
-	\</pre\>
+	  <span id="name">Name: george smith</span>
+	  <span id="address">Address: 45th & Harris</span>
+	</pre>
 
-  \</body\>
-
-  \</html\>
-
+  </body>
+  </html>
+  ```
 ----------------
   
 ## The similarities
   * Instantiating with the 'new' keyword - same.
   * Assigning data to named elements in the markup - same.
-  * Displaying - Smarty: display(); PHPFront: render().
+  * Displaying - Smarty: `display()`; PHPFront: `render()`.
 
 ## The differences (lest you think they're the same all the way):
 
-----------------
 Smarty
 
   * A smarty template is not a standard HTML markup. But a mix of HTML and Smarty's own tags and syntaxes.
-  * Smarty::assign() assigns data to template variables, and you pick up those variables on the template to manually render or loop over.
+  * `Smarty::assign()` assigns data to template variables, and you pick up those variables on the template to manually render or loop over.
   * A Smarty template file has the file extension .tpl. not .html
   * You must learn PHP, HTML and Smarty syntaxes to work with Smarty.
 
-----------------
 PHPFront
 
   * Any valid HTML markup is a template! And valid HTML markup is valid anywhere - with or without the PHPFront Engine!
-  * PHPFront::assign() assigns data directly to elements in a template. No extra overhead of editing the template using template syntaxes to render or loop over.
+  * `PHPFront::assign()` assigns data directly to elements in a template. No extra overhead of editing the template using template syntaxes to render or loop over.
   * Template file extension is rightly .html
   * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
-  Furthermore, if you know CSS, you can even target template elements by id ($PHPFront->assign('#element', '...')), ClassName ($PHPFront->assign('.element', '...')), Attribute ($PHPFront->assign('element[attr]', '...')).
-  And if you're a pro, find anything on the UI with xpath query: $PHPFront->assign('xpath:parent/child', '...').
+  Furthermore, if you know CSS, you can even target template elements by id (`$PHPFront->assign('#element', '...'))`, ClassName (`$PHPFront->assign('.element', '...'))`, Attribute (`$PHPFront->assign('element[attr]', '...'))`.
+  And if you're a pro, find anything on the UI with xpath query: `$PHPFront->assign('xpath:parent/child', '...')`.
 
 You should by now see the possibilities! See the official documentation, and tutorials! 
