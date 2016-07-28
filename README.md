@@ -34,7 +34,6 @@ Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot 
 **Folder Structure**
 
 Extract the PHPFront zip file and you’ll discover the most important folder for use named ‘lib’.
-
 This folder contains the core working files. *This folder and its content are things you SHOULD NOT edit*.
 
 Move the PHPFront folder to the frontend directory of your project or anywhere from the root directory of your project – depending on your application’s directory structure. Just make sure your application’s autoloader can pick up the PHPFront class when called – that’s if your project is bundled with an autoloader. Or simply note down the path to where you decide to put the PHPFront files so you can manually include this path during setup.
@@ -167,7 +166,7 @@ GPL-3.0 - See LICENSE
 	<pre>
 	  User Information:
 	  Name: george smith
-	  Address: 45th & Harris
+	  Address: 45th &amp; Harris
 	</pre>
 
   </body>
@@ -226,7 +225,7 @@ GPL-3.0 - See LICENSE
 	<pre>
 	  User Information:
 	  <span id="name">Name: george smith</span>
-	  <span id="address">Address: 45th & Harris</span>
+	  <span id="address">Address: 45th &amp; Harris</span>
 	</pre>
 
   </body>
@@ -254,7 +253,11 @@ PHPFront
   * `PHPFront::assign()` assigns data directly to elements in a template. No extra overhead of editing the template using template syntaxes to render or loop over.
   * Template file extension is rightly .html
   * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
-  Furthermore, if you know CSS, you can even target template elements by id (`$PHPFront->assign('#element', '...'))`, ClassName (`$PHPFront->assign('.element', '...'))`, Attribute (`$PHPFront->assign('element[attr]', '...'))`.
-  And if you're a pro, find anything on the UI with xpath query: `$PHPFront->assign('xpath:parent/child', '...')`.
+  Furthermore, if you know CSS, you can even target template elements by 
+  * id (`$PHPFront->assign('#element', '...'))`, 
+  * ClassName (`$PHPFront->assign('.element', '...'))`, 
+  * Attribute (`$PHPFront->assign('element[attr]', '...'))`.
+  And if you're a pro, find anything on the UI with xpath query: 
+  * `$PHPFront->assign('xpath:parent/child', '...')`.
 
 You should by now see the possibilities! See the official documentation, and tutorials! 
