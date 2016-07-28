@@ -255,13 +255,13 @@ PHPFront
   * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
   Furthermore, if you know CSS, you can even target template elements by
 
-  	id (`$PHPFront->assign('#element', $data))`,
+  	id: `$PHPFront->assign('#element', $data)`,
 
-  	ClassName (`$PHPFront->assign('.element', $data))`,
+  	Class: (`$PHPFront->assign('.element', $data)`,
 
-  	Attribute (`$PHPFront->assign('element[attr]', $data))`.
+  	Attribute: `$PHPFront->assign('element[attr]', $data)`.
 
-  And if you're a pro, find anything on the UI with xpath query: 
-  	`$PHPFront->assign('xpath:parent/child', $data)`.
+  And if you're a pro, find anything on the UI with XPATH query:
+  	XPATH: `$PHPFront->assign('xpath:parent/child', $data)`.
 
 You should by now see the possibilities! See the [official documentation](https://ox-harris.github.io/phpfront/documentation/), and tutorials! 
