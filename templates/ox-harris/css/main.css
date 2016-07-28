@@ -1,0 +1,225 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	position:relative;
+	background:whiteSmoke;
+	background:-moz-linear-gradient(lavender, white 200px);
+	background:-webkit-linear-gradient(lavender, white 200px);
+	background:-ms-linear-gradient(lavender, white 200px);
+	background:-o-linear-gradient(lavender, white 200px);
+	background:linear-gradient(lavender, white 200px);
+}
+footer {
+	position:relative;
+	background:-moz-linear-gradient(white, whiteSmoke);
+	background:-webkit-linear-gradient(white, whiteSmoke);
+	background:-ms-linear-gradient(white, whiteSmoke);
+	background:-o-linear-gradient(white, whiteSmoke);
+	background:linear-gradient(white, whiteSmoke);
+}
+.version {
+	position:relative;
+	float:right;
+	margin-top:5px;
+	display:inline-block;
+	padding-left:27.5px;
+	padding-right:27.5px;
+	color:salmon;
+	background:white;
+}
+
+header {
+}
+header .navbar-nav a {
+	font-weight:bold;
+	color:salmon !important;
+}
+header .navbar-nav a:hover,
+header .navbar-nav a:focus,
+header .navbar-nav a.active {
+	/*color:silver !important;*/
+}
+@media (min-width: 768px) {
+  header .navbar-nav > li.dropdown.hoverable:hover > ul.dropdown-menu {
+    display: block;
+  }
+  .navbar-default .navbar-nav a {
+	}
+	header .navbar-nav > li > a.active {
+		background:white !important;
+		box-shadow:0px 1px 2px silver inset;/**/
+	}
+	header .navbar-nav > li:hover,
+	header .navbar-nav > li > a:focus {
+		background:white !important;
+		box-shadow:0px 1px 2px silver inset;
+	}
+	
+	header .navbar-nav > li > a.active + .dropdown-menu > li > a.active {
+		background:whiteSmoke;
+	}
+}
+
+/*Affix behaviour only on larger screens*/
+.affix {
+	position: relative;
+}
+@media (min-width: 768px) {
+    .affix {
+        position: fixed;
+    }
+	#main_nav[data-spy="affix"].affix {
+		top:-270px;
+		max-width:190px;
+		z-index:50;
+	}
+	/*#main_nav[data-spy="affix"]*/.affix .scrollspy {
+		position:relative;
+		max-height:600px;
+		overflow:auto;
+	}
+	#main_nav[data-spy="affix"].affix ~ .col-md-8 {
+		margin-left:16.666%;
+	}
+}
+	
+
+
+
+
+
+main {
+	min-height:500px;
+}
+#main_content {
+}
+section {
+	margin-top:35px;
+	padding-bottom:35px;
+}
+.section {
+	margin-top:35px;
+	padding-bottom:35px;
+}
+.subsection {
+	margin-top:35px;
+	padding-bottom:35px;
+	border-bottom:1px dashed silver;
+}
+hr {
+	position:relative;
+	float:none;
+	clear:both;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5 {
+	color:skyblue;
+	color:salmon;
+	font-family:"Roboto",UILanguageFont,Arial,sans-serif;
+	font-family:"Open Sans Light",X-LocaleSpecific-Light,"Open Sans",X-LocaleSpecific,sans-serif;
+	font-family:Roboto,"Open Sans",Arial,Helvetica,sans-serif;
+	font-family:"Lato",Helvetica,Arial,Lucida,sans-serif;
+	font-weight:300;
+}
+h1 {
+	/*color:brown;*/
+	cursor:default;
+}
+.jumbotron h1,
+.jumbotron h2 {
+	color:black !important;
+}
+h3 .glyphicon {
+	position:relative;
+	display:block;
+	font-size:300%;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+h3 a {
+	font-size:18px !important;
+	white-space:normal !important;
+}
+
+
+
+img {
+	max-width:100%;
+}
+a:focus {
+	outline:none !important;
+}
+
+
+
+.panel-group .panel-default .panel-heading {
+	background:lavender;
+}
+.navbar-default {
+	background:none;
+	border:none;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	background:whiteSmoke;
+}
+
+.nav-pills  li {
+	float:none;
+	word-break:break-all;
+	overflow:hidden;
+}
+.nav-pills  li.active .nav-pills.sub-nav {
+	background:ghostWhite;
+}
+.nav-pills .nav-pills.sub-nav li.active a {
+	background:lightBlue;
+}
+.nav-pills .nav-pills.sub-nav li a:before {
+	position:relative;
+	display:inline-block;
+	left:-15px;
+	content:"* ";
+}
+pre {
+	border:none;
+	border-radius:0px;
+	margin:0px !important;
+	margin-bottom:15px !important;
+	font-size:15px;
+}
+.alert[data-label]::before {
+	position:relative;
+	margin-right:5px;
+	display:inline-block;
+	font-weight:bold;
+	border-bottom:1px solid rgba(0,0,0,0.125);
+	content:attr(data-label) "!";
+}
+
+.well {
+	background:white;
+}
+
+
+p, #main_content li {
+	font-size:16px;
+	line-height:25px;
+}
+
+footer .h4 {
+	margin-bottom:15px;
+	color:slategray;
+}
+footer .list-group-item {
+	background:none;
+}
