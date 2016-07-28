@@ -12,7 +12,7 @@ It helps you dynamically render application content on templates without mixing 
 
 Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot of new possibilities!
 
-**Compare PHPFront with Smarty and other Text-based Template Engines
+**Compare PHPFront with Smarty and other Text-based Template Engines**
   
   *  No template syntaxes - not even one. PHPFront is DOM-based not text-based.
   *  Requires no proprietary syntaxes, PHP codes, or the .tpl extension on templates.
@@ -22,8 +22,15 @@ Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot 
 ## Requirement
   PHPFront requires a web server running PHP 5.3 or greater.
 ## Installation
-  Download PHPFront if you have not already done so.
-### Folder Structure
+  There are two options:
+### With Composer
+  ```composer
+  composer require ox-harris/phpfront: ~1.0
+  ```
+### Github
+  [](https://github.com/ox-harris/phpfront/releases)
+
+**Folder Structure**
 Extract the PHPFront zip file and you’ll discover the most important folder for use named ‘lib’.
 
 This folder contains the core working files. *This folder and its content are things you SHOULD NOT edit*.
