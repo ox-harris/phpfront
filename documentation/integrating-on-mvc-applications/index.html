@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="PHPFront">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Integrating On Mvc Applications | PHPFront</title>
+<base href="/documentation/integrating-on-mvc-applications/">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin'%20type='text/css" media="all">
+<link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/templates/ox-harris/css/main.css">
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+  <header class="container"><div class="col-md-2 text-center">
+        <!-- -->
+        <a class="block active" href="/"><img src="/img/logoc.fw.png" alt="PHPFront logo"></a>
+        <!-- -->
+    </div>
+    
+    <nav class="col-md-8 navbar navbar-default"><div class="navbar-header">
+          <!-- -->
+          <!-- -->
+        </div>
+        <ul class="nav navbar-nav navbar-center">
+<li>
+            <a id="menu-about" data-toggle="dropdown" href="/about/"><!--<span class="glyphicon glyphicon-asterik"></span> -->About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-about">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="/about/features/">Features</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-possibilities/">The Possibilities</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-story/">The Story</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/">About</a></li>
+            </ul>
+</li>
+          
+          <li><a href="/download/"><!--<span class="glyphicon glyphicon-cloud-download"></span> -->Download</a></li>
+          
+          <li><a href="/documentation/" class="active"><!--<span class="glyphicon glyphicon-book"></span> -->Documentation</a></li>
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle" id="menu-community" data-toggle="dropdown" href="/community/"><!--<span class="glyphicon glyphicon-comment glyphicon-share-alt"></span> -->Community <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-community">
+<li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.twitter.com/PHPFront">Twitter</a></li>
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.facebook.com/PHPFront">Facebook</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://github.com/ox-harris/phpfront/issues">Issues</a></li>
+              <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="/community/">Community</a></li>-->
+            </ul>
+</li>
+          
+        </ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/get-involved/"><span class="glyphicon glyphicon-log-in"></span> Get Involved</a></li>
+        </ul></nav><div class="col-md-2 text-right">
+    </div>
+    
+    <div class="contains_float">
+      <div class="col-md-2 text-right">
+          <!-- -->
+          <a class="version" target="_blank" href="https://www.github.com/ox-harris/phpfront/releases">v1.0</a>
+          <!-- -->
+
+      </div>
+      
+      <div class="col-md-8">
+          
+        <table class="marquee"><tr>
+<td><a target="_blank" href="/documentation/">PHPFront Online Documentation now available!</a>
+</td>
+<td><a target="_blank" href="/download/">PHPFront is available on Composer: composer require ox-harris/phpfront: ~1.0</a>
+</td>
+<td><em><a target="_blank" href="mailto:phpfront@gmail.com">Contact us</a> to place an ad here...</em>
+</td>
+          </tr></table>
+</div>
+      
+      <div class="col-md-2 text-right">
+    </div>
+    </div>
+        
+  </header><br><main class="container"><nav class="col-md-2" id="main_nav" data-spy="affix" data-offset-top="360"><br><!-- --><ul class="nav nav-pills nav-stacked well" role="tablist">
+<p>Use PHPFront at <em><strong>little</strong></em> or <em><strong>zero</strong></em> learning curve!</p>
+        <br><!--
+        <li class="active">
+          <a target="_blank" href="https://github.com/ox-harris/phpfront/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        --><li class="active">
+          <a target="_blank" href="/download/"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ox-harris/phpfront"><span class="glyphicon glyphicon-link"></span> View on GitHub</a>
+        </li>
+      </ul>
+<!-- --><br><div class="scrollspy well">
+          
+        <h4>Navigation</h4>
+        
+        <ul class="nav nav-pills" role="tablist">
+<!--  class="nav nav-pills nav-stacked"--><li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#sample-mvc">Sample MVC</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#model">Model</a></li>
+<li><a href="#controller">Controller</a></li>
+<li><a href="#view">View</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#native-integration">Native Integration</a>
+          	</li>
+<li>
+            
+            <a href="#add_on-integration">Add-on Integration</a>
+          	</li>
+<li>
+            
+            <a href="#preview">Preview</a>
+          	</li>
+<li>
+            
+            <a href="#compare-integrations">Compare Integrations</a>
+          	</li>
+<li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#see-also">See Also</a>
+          	</li>
+        </ul>
+</div>
+      
+    </nav><div class="col-md-8">
+      <div class="we ll">
+        <h1>
+Integrating On Mvc Applications
+          <br><small></small>
+        </h1>
+        
+        <ul class="breadcrumb">
+<li><a href="/" title="This is your homepage" data-placement="right auto">Home</a></li>
+<li><a title="Documentation" href="/documentation/">Documentation</a></li>
+<li title="This is your current location" class="active">Integrating On Mvc Applications
+</li>
+</ul>
+<div id="main_content">
+<section class="contains_float">
+    <p>
+    If you are going to use PHPFront on MVC-based applications (websites), you have, at least, two integration methods. And either will be perfect.
+    </p>
+	
+    <ul>
+      <li>
+<b>Native Integration:</b> This is where PHPFront is deployed as the View component of the MVC application.</li>
+      <li>
+<b>Add-on Integration:</b> This is where an MVC application has a built-in View, with PHPFront instantiated from this native View.</li>
+    </ul>
+    
+    <p class="alert alert-info" data-label="Info">
+    MVC is a software design pattern that follows the Model-View-Controller architecture.
+    </p>
+    
+</section>
+
+
+<section>
+	<h2 id="sample-mvc">Sample MVC
+</h2>
+  	<p>
+    Consider a rough MVC setup. (This may not be typical of real-life MVC applications.)
+    </p>
+    
+    <div class="section">
+      <h3 id="model">Model
+</h3>
+      <p>
+      Models would normally be some database access library or set of libraries. <br>
+      Here, we will be OK with the PHP Database Object (PDO) class as the only thing in our model. With it, we'll select data from our database. 
+      </p>
+      
+      <p>
+      Here is the Model in a file named <code>Model.php</code>. 
+      </p>
+      
+      <br>
+      
+      <b>Model.php</b>
+      
+      <pre>
+      <code class="language-php">
+        
+      Class Model 
+      {
+          // Holds the PDO object
+          public $PDO;
+          
+          // Constructor. Instantiates PDO
+          public function __construct()
+          {
+              // Setup database connection
+              $this-&gt;PDO = new PDO("mysql:host=127.0.0.1; dbname=_DB_NAME_; charset=utf8", "_DB_USER_", "_DB_PASSWORD_");
+              // Be sure to use working values for _DB_NAME_, _DB_USER_, and _DB_PASSWORD_
+          }
+          
+          // Gets rows of data from the 'users' database table
+          public function getUsers()
+          {
+              $query = $this-&gt;PDO-&gt;query('SELECT name, email, username FROM users');
+              // Returns 3 rows
+              $all_users = $query-&gt;fetchAll();
+              
+              return $all_users;
+          }
+      }
+  
+      </code>
+      </pre>
+
+    </div>
+    
+    <div class="section">
+      <h3 id="controller">Controller
+</h3>
+      <p>
+      Controllers would normally be some class or set of classes that responds to HTTP requests from the user, performs appropriate tasks in the Model, 
+      gives results back to the View for display. Controllers generally interface between the Model and the View but isolate them.
+      </p>
+      
+      <p>
+      Here, we'll code a controller class for ourself in a file named <code>Controller.php</code>. 
+      </p>
+      
+      <br>
+      
+      <b>Controller.php</b>
+      
+      <pre>
+      <code class="language-php">
+        
+      Class Controller 
+      {
+          // Holds the Model object
+          public $Model;
+          
+          // Holds the View object
+          public $View;
+          
+          // Constructor. Instantiates PDO
+          public function __construct()
+          {
+              // Setup model
+              $this-&gt;Model = new Model;
+          }
+          
+          // Sends all data to View for rendering
+          public function createPage()
+          {
+          }
+      }
+  
+      </code>
+      </pre>
+    </div>
+    
+    <div class="section">
+      <h3 id="view">View
+</h3>
+      <p>
+      Views would also normally be some class or set of classes for parsing all the contents from Controllers and displaying them. 
+      They would also translate user interactions into HTTP requests back to Controllers.
+      </p>
+      
+      <p>
+      Now, for our View, we have two options: just use PHPFront (Native Integration) or code a View class from scratch and add PHPFront (Add-On Integration).
+      </p>
+      
+      <p>
+      One more thing, let's borrow the template used on our <a target="_blank" href="/documentation/hello-world/">Hellow World Example</a> 
+      and add a table element after the <code>&lt;p&gt;</code> element. <br>
+      Notice that we're creating only a row with a single column even though we hope to get, at least, 3 rows with 3 columns of data. 
+      This skeleton for a table is enough for PHPFront to work with. It will help us complete the remaining rows and columns using Repeats.
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+      &lt;!-- Users Table --&gt;
+      &lt;table id="users_data"&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      
+      </code>
+      </pre>
+    </div>
+</section>
+
+
+<section>
+	<h2 id="native-integration">Native Integration
+</h2> 
+    <p>
+    <em>This is where PHPFront is deployed as the View component of the MVC application.</em> 
+    </p>
+    
+    <p>
+    So our View will be PHPFront. <br>
+    Its role is to receive data from the Controller through its <code>assign()</code> function and then displaying it.
+    </p>
+    
+    <p>
+    Now, let's complete our Controller class with PHPFront integrated. After that we'll be done with our application.
+    </p>
+    
+    <br>
+    
+    <b>Controller.php</b> 
+    <p>
+    In the constructor, add the following code:
+    </p>
+    
+    <pre>
+    <code class="language-php">
+      
+          // Instantiate PHPFront
+          $this-&gt;View = new PHPFront;
+
+    </code>
+    </pre>
+
+    <p>
+    In the <code>createPage()</code> function, add the following code:
+    </p>
+    
+    <pre>
+    <code class="language-php">
+      
+          // Get all data from model and send to the #users_data table in the template
+          $this-&gt;View-&gt;assign('#users_data', $this-&gt;Model-&gt;getUsers());
+          
+          // Display page
+          $this-&gt;View-&gt;render();
+
+    </code>
+    </pre>
+
+    
+    <p>
+    From the obvious, the whole application, right from the start, is recognizing PHPFront as its View component. <br>
+    This is native, or inbuilt, with the core application.
+    </p>
+    
+</section>
+
+
+   
+<section>
+	<h2 id="add_on-integration">Add-on Integration
+</h2> 
+    <p>
+    <em>This is where an MVC application has a built-in View, with PHPFront instantiated from this native View.</em>
+    </p>
+    
+    <p>
+    In this case, we will create a View class. Data gathered by the Controller will be built up on this native View.
+    Then from this View, it will be handed over 
+    to PHPFront either individually using PHPFront's <code>assign()</code> function or as a whole using PHPFront's <code>assignDataStack()</code> function. 
+    </p>
+    
+    <p>
+    Our View class will be in a file named <code>View.php</code>
+    </p>
+    
+    
+    
+    <div class="section">
+      <b>View.php</b>
+      
+      <pre>
+      <code class="language-php">
+        
+        Class View 
+        {
+            // Holds all data from Controller
+            public $data = array();
+            
+            // Constructor
+            public function __construct()
+            {
+            }
+            
+            // Sends the built-up data to PHPFront
+            // Renders it
+            public function display()
+            {
+                // Instantiate PHPFront
+                $PHPFront = new PHPFront;
+                
+                // Assign
+                $PHPFront-&gt;assign('#users_data', $this-&gt;data['all_users']);
+                
+                // Render
+                $PHPFront-&gt;render();
+            }
+        }
+  
+      </code>
+      </pre>
+      
+    </div>
+    
+    
+    <p>
+    Now, let's complete our Controller class with the native View added.
+    </p>
+    
+    <div class="section">
+      <b>Controller.php</b>
+      
+      <p>
+      In the constructor, add the following code:
+      </p>
+      
+      <pre>
+      <code class="language-php">
+        
+            // Instantiate our native View
+            $this-&gt;View = new View;
+  
+      </code>
+      </pre>
+      
+      <p>In the <code>createPage()</code> function, add the following code:</p>
+      
+      <pre>
+      <code class="language-php">
+        
+            // Get all data from model and add to the View::$data array
+            $this-&gt;View-&gt;data['users_data'] = $this-&gt;Model-&gt;getUsers();
+            
+            // Display page
+            $this-&gt;View-&gt;display();
+  
+      </code>
+      </pre>
+  
+    </div>
+    
+</section>
+
+
+
+    
+<section>
+    <h2 id="preview">Preview
+</h2>
+    <p>
+    Let's run our MVC app. The <code>Model.php</code>, <code>Controller.php</code>, <code>View.php</code>, and the PHPFront folder are all in the root directory of our server. 
+    Now, we'll also create an <code>index.php</code> file that will kick-start the process. Browse to your server to run our app.
+    </p>
+    
+    <b>index.php</b>
+    <pre>
+    <code class="language-php">
+    	
+    // Include the necessary files.
+    include 'Model.php';
+    include 'Controller.php';
+    include 'View.php';
+    include 'PHPFront/lib/PHPFront.php';
+    
+    // Our Controller is the entry point
+    $app = new Controller;
+    // Create page
+    $app-&gt;createPage();
+    
+    </code>
+    </pre>
+    
+    <p>
+    Both the Native Integration and the Add-on Integration above will give the same result.
+    </p>
+    
+    <p>
+    Also, let's take an interest in the <code>#users_data</code> table. 
+    Notice how PHPFront produced a fully formed table from the single-row, single-column structure we coded. 
+    Our <code>$all_users</code> data could have been any number of rows of any number of columns, and PHPFront Repeats would have still nicely completed the rest.
+    </p>
+  
+    <pre>
+    <code class="language-markup">
+
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+        &lt;title&gt; - PHPFront&lt;/title&gt;
+      &lt;/head&gt;
+      
+      &lt;body&gt;
+        
+        &lt;header&gt;
+          &lt;nav id="menu"&gt;
+            &lt;a id="link1" href="/"&gt;&lt;/a&gt;
+            &lt;a id="link1" href="/about"&gt;&lt;/a&gt;
+            &lt;a id="link1" href="/follow"&gt;&lt;/a&gt;
+          &lt;/nav&gt;
+        &lt;/header&gt;
+          
+        &lt;main&gt;
+          &lt;h1&gt;[Heading 1]&lt;/h1&gt;
+          &lt;p&gt;[This is default text.]&lt;/p&gt;
+		  
+          &lt;!-- Users Table --&gt;
+          &lt;table id="users_data"&gt;
+            &lt;tr&gt;&lt;td&gt;Ryan&lt;/td&gt;&lt;td&gt;ryan@example.com&lt;/td&gt;&lt;td&gt;ryanexample&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;James&lt;/td&gt;&lt;td&gt;james@example.com&lt;/td&gt;&lt;td&gt;jamesexample&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Jack&lt;/td&gt;&lt;td&gt;jack@example.com&lt;/td&gt;&lt;td&gt;jackexample&lt;/td&gt;&lt;/tr&gt;
+          &lt;/table&gt;
+          
+          
+          &lt;aside id="sidebar_wrapper"&gt;
+          &lt;/aside&gt;
+        &lt;/main&gt;
+      
+        &lt;footer&gt;
+          &lt;small&gt; (c) 2016 Me &lt;/small&gt;
+        &lt;/footer&gt;
+        
+      &lt;/body&gt;
+      &lt;/html&gt;
+
+    </code>
+    </pre>
+</section>
+
+
+
+<section>
+    <h2 id="compare-integrations">Compare Integrations
+</h2>        
+    
+    <p>
+    While the application's MVC working principles remained the same, implementations were diferent and one was easier. 
+    </p>
+
+    <p>
+    <b>Native PHPFront integrations</b> are faster, and are the simplest method of finishing your front-end 
+    - after all the hard work in the Model and Controller. 
+    </p>
+    
+    <p>
+    From your Controller, you could obtain simple content or nested arrays - complex array of any dimension. 
+    And, instead of creating a View to manually loop over these data, you just hand them over to PHPFront. Your application is ready!
+    </p>
+    
+    <p class="alert alert-info" data-label="Info">
+    Native PHPFront Integration is the implementation in the BraveCode Web Application Framework!
+    </p>
+    
+    <p>
+    True, <b>Add-on PHPFront integrations</b> have a bit of extra work of creating a native View. 
+    But this may be neccessary where: <br>
+    (1) there are other things to do with data just before rendering by PHPFront, <br>
+    (2) we do not have permissions to replace the application's existing View, <br>
+    Or, (3) we want support for multiple template engines, in which case the native View will hold the data and decide the template engine to use.
+    </p>
+    
+    <p>
+    This way, undeploying PHPFront or switching between 
+    template engines will have nothing to do with the rest of the application but the few lines of code in the View.
+    </p>
+      
+</section>
+    
+
+    
+
+<section class="contains_float">
+	<p>
+    <a class="btn list-group-item" href="/documentation/">Back to Documentation Home</a>
+    </p>
+</section>
+
+
+
+<section class="contains_float">
+	<h2 id="see-also">See Also
+</h2>
+	<ul>
+      <li>
+      <a href="/documentation/working-with-phpfront/">Working with PHPFront</a>
+      </li>
+    </ul>
+</section>
+
+        
+        
+        <!-- PAGE CONENT ENDS HERE -->
+        
+        
+        <hr>
+<!-- DISQUS COMMENTS --><div id="disqus_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	
+	var disqus_config = function () {
+		//this.page.url = PAGE_URL;
+		//this.page.identifier = PAGE_IDENTIFIER;
+	};
+	
+	(function() {
+		var d = document, s = d.createElement("script");
+		s.src = "//phpfront.disqus.com/embed.js";
+		s.setAttribute("data-timestamp", +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	
+	<noscript>
+	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+	</div>
+        <!-- END DISQUS COMMENTS -->
+        
+        <br><br><br><br>
+</div>
+          
+
+      </div>
+    </div>
+    
+    <aside class="col-md-2" id="body_aside"><br><!-- BEGIN ADS --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- PHPFront --><ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6327847773209365" data-ad-slot="6615332335"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script><!-- END ADS --></aside></main><footer><div class="contains_float container">
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">PHPFront</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/about/">Why PHPFront</a></li>
+          <li class="list-group-item"><a href="/about/features/">Features</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Documentation</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/documentation/">Getting Started</a></li>
+          <li class="list-group-item"><a href="/documentation/working-with-phpfront/">Developer Docs</a></li>
+          <li class="list-group-item"><a href="/documentation/designing-for-phpfront/">Designer Docs</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Get Involved</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.github.com/ox-harris/phpfront">Contribute on GitHub</a></li>
+          <li class="list-group-item"><a href="https://github.com/ox-harris/phpfront/issues">Report Bugs/Issues</a></li>
+          <li class="list-group-item"><a href="/get-involved/">Support PHPFront</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Community</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.twitter.com/PHPFront">Twitter</a></li>
+          <li class="list-group-item"><a href="https://www.facebook.com/PHPFront">Facebook</a></li>
+        </ul>
+</div>
+
+    </div>
+    
+    <div class="contains_float container">
+      <br><div class="text-center">© 2016 Ox-Harris Creative</div>
+      <div class="text-right" style="color:salmon"><em>This site was pre-rendered with PHPFront &amp; PHP • Built by <a href="https://www.twitter.com/ox_harris">@Ox-Harris</a></em></div>
+      
+      <br>
+</div>
+  </footer><script class="scripts" src="/js/jquery.min.js"></script><script class="scripts" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><script class="scripts" src="/js/prism.js"></script><script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('[title]').tooltip();
+	});
+	</script><script id="dsq-count-scr" src="//phpfront.disqus.com/count.js" async></script><!-- **************************************************************************** -->
+</body>
+</html>
