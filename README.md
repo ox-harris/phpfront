@@ -130,20 +130,20 @@ GPL-3.0 - See LICENSE
 #### The template - before
 
   ```markup
-  &lt;html&gt;
-  &lt;head&gt;
-  &lt;title&gt;Info&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+  <html>
+  <head>
+  <title>Info</title>
+  </head>
+  <body>
 
-	&lt;pre&gt;
+	<pre>
 	  User Information:
 	  Name: {$name}
 	  Address: {$address}
-	&lt;/pre&gt;
+	</pre>
 
-  &lt;/body&gt;
-  &lt;/html&gt;
+  </body>
+  </html>
   ```
   
 #### The template - after
