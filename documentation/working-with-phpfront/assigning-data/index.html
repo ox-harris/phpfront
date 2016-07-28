@@ -1,0 +1,1120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="PHPFront">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Assigning Data | PHPFront</title>
+<base href="/documentation/working-with-phpfront/assigning-data/">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin'%20type='text/css" media="all">
+<link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/templates/ox-harris/css/main.css">
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+  <header class="container"><div class="col-md-2 text-center">
+        <!-- -->
+        <a class="block active" href="/"><img src="/img/logoc.fw.png" alt="PHPFront logo"></a>
+        <!-- -->
+    </div>
+    
+    <nav class="col-md-8 navbar navbar-default"><div class="navbar-header">
+          <!-- -->
+          <!-- -->
+        </div>
+        <ul class="nav navbar-nav navbar-center">
+<li>
+            <a id="menu-about" data-toggle="dropdown" href="/about/"><!--<span class="glyphicon glyphicon-asterik"></span> -->About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-about">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="/about/features/">Features</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-possibilities/">The Possibilities</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-story/">The Story</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/">About</a></li>
+            </ul>
+</li>
+          
+          <li><a href="/download/"><!--<span class="glyphicon glyphicon-cloud-download"></span> -->Download</a></li>
+          
+          <li><a href="/documentation/" class="active"><!--<span class="glyphicon glyphicon-book"></span> -->Documentation</a></li>
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle" id="menu-community" data-toggle="dropdown" href="/community/"><!--<span class="glyphicon glyphicon-comment glyphicon-share-alt"></span> -->Community <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-community">
+<li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.twitter.com/PHPFront">Twitter</a></li>
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.facebook.com/PHPFront">Facebook</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://github.com/ox-harris/phpfront/issues">Issues</a></li>
+              <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="/community/">Community</a></li>-->
+            </ul>
+</li>
+          
+        </ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/get-involved/"><span class="glyphicon glyphicon-log-in"></span> Get Involved</a></li>
+        </ul></nav><div class="col-md-2 text-right">
+    </div>
+    
+    <div class="contains_float">
+      <div class="col-md-2 text-right">
+          <!-- -->
+          <a class="version" target="_blank" href="https://www.github.com/ox-harris/phpfront/releases">v1.0</a>
+          <!-- -->
+      </div>
+      
+      <div class="col-md-8">
+          
+        <table class="marquee"><tr>
+<td><a target="_blank" href="/documentation/">PHPFront Online Documentation now available!</a>
+</td>
+<td><a target="_blank" href="/download/">PHPFront is available on Composer: composer require ox-harris/phpfront: ~1.0</a>
+</td>
+<td><em><a target="_blank" href="mailto:phpfront@gmail.com">Contact us</a> to place an ad here...</em>
+</td>
+          </tr></table>
+</div>
+      
+      <div class="col-md-2 text-right">
+    </div>
+    </div>
+        
+  </header><br><main class="container"><nav class="col-md-2" id="main_nav" data-spy="affix" data-offset-top="360"><br><!-- --><ul class="nav nav-pills nav-stacked well" role="tablist">
+<p>Use PHPFront at <em><strong>little</strong></em> or <em><strong>zero</strong></em> learning curve!</p>
+        <br><!--
+        <li class="active">
+          <a target="_blank" href="https://github.com/ox-harris/phpfront/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        --><li class="active">
+          <a target="_blank" href="/download/"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ox-harris/phpfront"><span class="glyphicon glyphicon-link"></span> View on GitHub</a>
+        </li>
+      </ul>
+<!-- --><br><div class="scrollspy well">
+          
+        <h4>Navigation</h4>
+        
+        <ul class="nav nav-pills" role="tablist">
+<!--  class="nav nav-pills nav-stacked"--><li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#function">Function</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#usage">Usage</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#data-as-simple-argument">$data As Simple Argument</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#assigning-strings">Assigning Strings</a></li>
+<li><a href="#assigning-arrays-_-auto-population">Assigning Arrays - Auto Population</a></li>
+<li><a href="#assigning-arrays-_-associative-population">Assigning Arrays - Associative Population</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#data-as-compound-argument">$data As Compound Argument</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#parameters-of-the-data-compound-argument">Parameters of the $data Compound Argument</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#summary">Summary</a>
+          	</li>
+<li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#see-also">See Also</a>
+          	</li>
+        </ul>
+</div>
+      
+    </nav><div class="col-md-8">
+      <div class="we ll">
+        <h1>
+Assigning Data
+          <br><small></small>
+        </h1>
+        
+        <ul class="breadcrumb">
+<li><a href="/" title="This is your homepage" data-placement="right auto">Home</a></li>
+<li><a title="Documentation" href="/documentation/">Documentation</a></li>
+<li><a title="Working With Phpfront" href="/documentation/working-with-phpfront/">Working With Phpfront</a></li>
+<li title="This is your current location" class="active">Assigning Data
+</li>
+</ul>
+<div id="main_content">
+<section class="contains_float">
+    <p>
+    You assign data to specific template elements using the <a target="_blank" href="/documentation/functions/#assign"><code>PHPFront::assign()</code></a> function. <br>
+    This may be by far your most-used function.
+    </p>
+	
+    <p>
+    This functions adds an item to the internal data store - <code>PHPFront::$data_stack</code> - the total collection of data it uses for rendering. <br>
+    Every piece of data in the store is associated with an element.
+    </p>
+    
+    <p class="alert alert-warning" data-label="Note">
+    <code>PHPFront::assign()</code> used to be <code>PHPFront::assignData()</code> in earlier, beta, versions of PHPFront.
+    </p>
+    
+</section>
+
+
+<section>
+	<h2 id="function">Function
+</h2>
+  
+    <pre>
+    <code class="language-php">
+      
+      PHPFront::assign($element_selector, $data[, $replace = true, $recurse = true, $is_include_path = false]);
+      
+    </code>
+    </pre>
+    
+    <p>
+    This function accepts two required parameters: <br>
+    <code>$element_selector</code> - always a string of either CSS selector or XPath query.<br>
+    <code>$data</code> - a string or an array. This parameter is interpreted as either of two things:
+    </p>
+    <ul>
+      <li>
+<b>A simple argument</b> – a string of content or an array of contents.</li>
+      <li>
+<b>A compound argument</b> – an array of other arguments.</li>
+    </ul>
+    
+    <p>
+    Then there are three optional parameters: <br>
+    <code>$replace</code> - (boolean) Tells whether to replace data already assigned for the given <code>$element_selector</code> or add to it. (Default: true - replace )<br>
+    <code>$recurse</code> - (boolean) Tells whether to replace data recursely or merge recursely. (Default: true - recurse )
+    <code>$is_include_path</code> - (boolean) Tells whether to send <code>$data</code> to <code>PHPFront::$include_stack</code> or <code>PHPFront::$data_stack</code>. (Default: false)
+    </p>
+    
+    
+    <div class="section">
+      <h3 id="usage">Usage
+</h3>
+      
+      <pre>
+      <code class="language-php">
+        
+        $PHPFront-&gt;assign($element_selector, $data);
+        
+      </code>
+      </pre>
+    
+      <p class="alert alert-info" data-label="Tip">
+      All the examples on this page are built the <a target="_blank" href="/documentation/hello-world/">Hello World</a> setup example. Hope you're familiar with it.
+      </p>
+    
+    </div>
+      
+</section>   
+   
+    
+<section>
+    <h2 id="data-as-simple-argument">$data As Simple Argument
+</h2>
+    
+    
+    
+    <div class="section">
+      <h3 id="assigning-strings">Assigning Strings
+</h3>
+      <p>
+      A string is always content for the selected elements.
+      </p>
+      <p>
+      In the code below, our first argument to the <code>assign()</code> function is a string of CSS selector and the second is a string of content for the targeted element.
+      </p>
+      
+      <b>The element</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;&lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <b>Assignment</b>
+      <pre>
+      <code class="language-php">
+        
+        $PHPFront-&gt;assign('#content-box', 'This is simple content');
+        
+      </code>
+      </pre>
+      
+      <b>Result</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;This is simple content&lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <p>
+      Preview your app.php in a browser to view this content.
+      </p>
+      
+      <p class="alert alert-info" data-label="Tip">
+      If the element had initial text content or childnodes, they would all be replaced. 
+      <!-- -->
+      <br>
+      <br>
+      Use the CSS Pseudo classes: ::before, ::after to append or prepend to elements' exsting content.
+      </p>
+      
+      <p class="alert alert-info" data-label="Tip">
+      If the selector applied to more than one element, they would all be affected.
+      <br>
+      <br>
+      Use the CSS Pseudo classes: first-of-type, last-of-type, nth-of-type(n) to target one out of many.
+      </p>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="section">
+      <h3 id="assigning-arrays-_-auto-population">Assigning Arrays - Auto Population
+</h3>
+      <p>
+      An array targets the children of an element.
+      </p>
+      
+      <p>
+      In the example below, our element has 3 childnodes, and our <code>$data</code> is an array of 3 items. <br>
+      The pieces of <code>$data</code> will be distributed to, or populated on, the immediate childnodes of this element, and will not replace them.
+      </p>
+      
+      <b>The element</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;
+          &lt;span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;/span&gt;
+          &lt;small&gt;&lt;/small&gt;
+        &lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <b>The $data</b>
+      <pre>
+      <code class="language-php">
+        
+        $data = array('this is a span element', 'this is a second span element', 'this is a small text');
+        
+      </code>
+      </pre>
+      
+      <b>Assignment</b>
+      <pre>
+      <code class="language-php">
+        
+        $PHPFront-&gt;assign('#content-box', $data);
+        
+      </code>
+      </pre>
+      
+      <b>Result</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;
+          &lt;span&gt;this is a span element&lt;/span&gt;
+          &lt;span&gt;this is a second span element&lt;/span&gt;
+          &lt;small&gt;this is a small text&lt;/small&gt;
+        &lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <p class="alert alert-success" data-label="Done">
+      With just one line of code <code>assign()</code>, we populated 3 elements!
+      </p>
+      
+      <hr>
+      
+      <p>
+      Note that if the childnodes of <code>#content-box</code> were in a different order, with the <code>&lt;small&gt;</code> element as first child, result would be different.
+      <br>
+      Here we go:
+      </p>
+      
+      
+      <b>Result 2</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;
+          &lt;small&gt;this is a span element&lt;/small&gt;
+          &lt;span&gt;this is a second span element&lt;/span&gt;
+          &lt;span&gt;this is a small text&lt;/span&gt;
+        &lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <p>
+      This is called auto population, and is usually blind as the elements recieve their data based on their position and not based on their type, id, or class.
+      </p>
+      
+      <p class="alert alert-info" data-label="Tip">
+      Where the number of items exceeds the number of child elements, PHPFront will repeat a child (or all the children) one or more times to fully render data.
+      This happens only on auto population.
+      <br>
+      <br>
+      Get started with repeats <a target="_blank" href="/documentation/working-with-phpfront/repeats/">here</a>.
+      </p>
+    
+    </div>
+    
+    
+    
+    
+    
+    <div class="section">
+      <h3 id="assigning-arrays-_-associative-population">Assigning Arrays - Associative Population
+</h3>
+      <p>
+      Remember, an array targets the children of an element.
+      </p>
+      
+      <p>
+      It is possible to associate pieces of content in an array to named childnodes of an element. <br>
+      To do this every piece of content in our array will be given a key – a childnode selector.
+      </p>
+      
+      <b>The element</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;
+          &lt;span id="childnode-1"&gt;&lt;/span&gt;
+          &lt;span id="childnode-2"&gt;&lt;/span&gt;
+          &lt;small id="childnode-3"&gt;&lt;/small&gt;
+        &lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <b>The $data</b>
+      <pre>
+      <code class="language-php">
+        
+        $data = array('#childnode-3' =&gt; 'this is a span element', '#childnode-1' =&gt; 'this is a second span element', '#childnode-2' =&gt; 'this is a small text');
+        
+      </code>
+      </pre>
+      
+      <b>Assignment</b>
+      <pre>
+      <code class="language-php">
+        
+        $PHPFront-&gt;assign('#content-box', $data);
+        
+      </code>
+      </pre>
+      
+      <b>Result</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;
+          &lt;span id="childnode-1"&gt;this is a span element&lt;/span&gt;
+          &lt;span id="childnode-2"&gt;this is a second span element&lt;/span&gt;
+          &lt;small id="childnode-3"&gt;this is a small text&lt;/small&gt;
+        &lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <p>
+      Note that, unlike blind population, items in our array did not need to be in the order of the childnodes. 
+      </p>
+      
+      <p class="alert alert-info" data-label="Tip">
+      The '::before' and '::after' pseudo classes also work for Associative Population
+      </p>
+      <p id="assigning-nested-arrays" class="alert alert-info" data-label="Tip">
+      Content arrays can be nested to form multidimensional arrays. That's how you target descendants in any depth
+      </p>
+      
+    </div>
+    
+</section>
+    
+    
+    
+    
+<section>
+    <h2 id="data-as-compound-argument">$data As Compound Argument
+</h2>
+    <p>
+    As a <em>simple argument</em>, <code>$data</code> supplies content for an element or its children.<br>
+    But as a <em>compound argument</em>, it supplies a list of arguments or other rendering rules for manipulating an element - always in <code>parameter_name =&gt; parameter_value</code> pairs.<br>
+    Parameter names in <code>$data</code> are always prefixed with the @ symbol; and PHPFront captures each argument and executes accordingly.
+    </p>
+    
+    <div class="section">
+      <h3 id="basic-usage">Basic Usage
+</h3>
+      <p>
+      In the example below, both content and attribute are being assigned to our usual <code>#content-box</code> using the <code>$data</code> compound argument.
+      </p>
+      
+      <b>The element</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box"&gt;&lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <b>The $data</b>
+      <pre>
+      <code class="language-php">
+        
+        $data = array(
+          '@content' =&gt; 'This is simple content',
+          '@attr' =&gt; array('class' =&gt; 'large-text')
+        );
+        
+      </code>
+      </pre>
+      
+      <b>Assignment</b>
+      <pre>
+      <code class="language-php">
+        
+        $PHPFront-&gt;assign('#content-box', $data);
+        
+      </code>
+      </pre>
+      
+      <b>Result</b>
+      <pre>
+      <code class="language-markup">
+        
+        &lt;div id="content-box" class="large-text"&gt;This is simple content&lt;/div&gt;
+        
+      </code>
+      </pre>
+      
+      <p>
+      In just one assignment, we set an element's content and classname.
+      </p>
+      
+      
+      <hr>
+      
+      <p>
+      We could have done the same thing in two assignments.
+      <br>
+      Like this:
+      </p>
+      
+      
+      <b>Assigment</b>
+      <pre>
+      <code class="language-php">
+        
+        $data_1 = 'This is simple content';
+        // Or, when in compound argument
+        $data_1 = array( '@content' =&gt; 'This is simple content');
+        
+        $data_2 = array( '@attr' =&gt; array('class' =&gt; 'large-text'));
+        
+        $PHPFront-&gt;assign('#content-box', $data_1);
+        $PHPFront-&gt;assign('#content-box', $data_2);
+
+      </code>
+      </pre>
+      
+    </div>
+      
+      
+      
+    <div class="section">
+      <h3 id="parameters-of-the-data-compound-argument">Parameters of the $data Compound Argument
+</h3>
+      <p>
+      The <code>$data</code> compound argument has 7 parameters for element manipulation. <br>
+      Parameters are executed in the order given below.<br>
+      Now, you could achieve wonderful things on an element in just one assignment that combines these parameters. <br>
+      </p>
+            
+      <pre>
+      <code class="language-php">
+        
+        $PHPFront-&gt;assign($element_selector, array(
+          // Take processing parameters
+          '@params' =&gt; array,
+          
+          // Get external element
+          '@import' =&gt; string,
+          
+          // Set element content
+          '@content' =&gt; string|array,
+          
+          // Set element attribute
+          '@attr' =&gt; array,
+          
+          // Distribute on children
+          '@children' =&gt; array,
+          
+          // Change existence of this element
+          '@render' =&gt; string|bool,
+          
+          // Repeat this element
+          '@repeat' =&gt; array,
+        ));
+        
+      </code>
+      </pre>
+      
+      <p class="alert alert-warning" data-label="Note">
+      PHPFront will complain when an unrecognized item is listed as parameter of compound argument. (Throws Exception!)
+      </p>
+    
+      <hr>
+      
+      <div class="subsection">
+        <h4>@params</h4>
+        <p>
+        <em>Affects the runtime behavior of PHPFront on specific elements with quite a few settings supplied in <code>key =&gt; value</code> pairs.</em>
+        </p>
+        <p>
+        PHPFront strips each instruction and applies it on the current element.<br>
+        The settings work per element, and sometimes, including its children.<br>
+        </p>
+        <p>
+        See the chapter <a target="_blank" href="/documentation/working-with-phpfront/setting-runtime-parameters/">Setting Runtime Parameters</a> for the current working properties of the <code>@params</code> parameter.
+        </p>
+      </div>
+      
+      
+      <div class="subsection">
+        <h4>@import</h4>
+        <p>
+        <em>Imports some extra external elements or markup into a particular element.</em>
+        </p>
+        <p>
+        There are 3 possible locations to import from: the current loaded document, a document elsewhere on the same server, a document on another server.
+        </p>
+        
+        <pre>
+        <code class="language-php">
+          
+          // Import the #menu element in this document into #parent-element - append
+          $PHPFront-&gt;assign('#parent-element', array(
+              '@import::after' =&gt; '#menu'
+          ));
+          
+          // Import the #menu element from another file in this server. (Relative and absolute paths acceptable.)
+          $PHPFront-&gt;assign('#parent-element', array(
+              '@import::after' =&gt; 'url(../../template_parts.html#menu)'
+          ));
+          
+          // Import the #menu element from another file in another server. (Absolute URL only.)
+          $PHPFront-&gt;assign('#parent-element', array(
+              '@import::after' =&gt; 'url(https://www.example.com/#menu)'
+          ));
+          
+        </code>
+        </pre>
+        
+        <p>
+        You can assign data to an element that is yet to be imported into the document. <br>
+        This works because <code>@import</code> commands are handled first before the other @ parameters - with the exception of <code>@params</code>. <br>
+        So by the time <code>@content</code> is executed, the external element would have been imported and available to accept the assigned content. 
+        </p>
+        
+        <p>
+        In the example below, a class attribute has been assigned to a <code>#menu</code> element that is yet to be imported and an array of content is waiting to be populated on all <code>&lt;li&gt;</code> elements inside it.
+        </p>
+        
+        <pre>
+        <code class="language-php">
+          
+          // Import the #menu element in this document into #parent-element - append
+          $PHPFront-&gt;assign('#parent-element', array(
+              // Import #menu
+              '@import::after' =&gt; '#menu',
+              
+              // Move on to Children
+              '@children' =&gt; array(
+                  
+                  // There could be many children
+                  // but choose the just-imported #menu
+                  '#menu' =&gt; array(
+                      
+                      // Set attribute
+                      '@attr' =&gt; array('class' =&gt; 'submenu_item'),
+                      
+                      // Then populate content on the list elements of #menu
+                      '@children' =&gt; array(
+                          'Home',
+                          'About Us',
+                          'Contact Us'
+                      )
+                  )
+              )
+          ));
+          
+        </code>
+        </pre>
+        
+        <p class="alert alert-success" data-label="Wow">
+        We just nested compound arguments in that example!
+        </p>
+      
+     </div>
+      
+
+      <div class="subsection">
+        <h4>@content</h4>
+        <p>
+        <em>Supplies content to an element as a string or an array.</em>
+        </p>
+        <p>
+        This parameter is the same as <code>$data</code> when functioning as simple argument. 
+        </p>
+        
+        <p>
+        Given the <code>#content-box</code> element of previous examples, assignments A and B below are the same.
+        </p>
+        
+        <pre>
+        <code class="language-php">
+          
+          // A. Content from inside a compound argument
+          $PHPFront-&gt;assign('#content-box', array(
+            '@content::after' =&gt; 'This content is appearing after any existing content'
+          ));
+          
+          // B. Content as simple argument
+          $PHPFront-&gt;assign('#content-box::after', 'This content is appearing after any existing content');
+                      
+        </code>
+        </pre>
+        
+        <p>
+        We could also assign an array of content to an element; remember the <a href="/documentation/working-with-phpfront/assigning-data/#assigning-array-auto-population">auto population</a> given earlier. <br>
+        And don't forget, arrays target children, not the element itself.
+        </p>
+        
+        <pre>
+        <code class="language-php">
+          
+          $PHPFront-&gt;assign('#content-box', array(
+            '@content::after' =&gt; array('this is a span element', 'this is a second span element', 'this is a small text')
+          ));
+                      
+        </code>
+        </pre>
+        
+        <p class="alert alert-info" data-label="Tip">
+        We placed the '::before' pseudo class on the <code>@content</code> parameter and not on the element selector itself!
+        <br>
+        <br>
+        A '::before' or '::after' pseudo class on an element selector will apply generally on all the '@' parameters. Placing them on individual '@' parameters overrides that general rule.
+        </p>
+        
+      </div>
+      
+      
+      <div class="subsection">
+        <h4>@attr</h4>
+        <p>
+        <em>Supplies a list of attributes to an element in <code>key =&gt; value</code> pairs.</em>
+        </p>
+        <p>
+        Let's add some values to any existing values for the class and style attributes in the <code>#content-box</code> element.
+        </p>
+        
+        <pre>
+        <code class="language-php">
+          
+          $PHPFront-&gt;assign('#content-box::after', array('@attr' =&gt; array('class' =&gt; 'large-text boldened', 'style' =&gt; 'background:red')));
+          
+        </code>
+        </pre>
+        
+      </div>
+      
+      
+      <div class="subsection">
+        <h4>@children</h4>
+        <p>
+        <em>Supplies an array of contents to an element's children.</em>
+        </p>
+        <p>
+        This is an alias of the <code>@content</code> parameter; 
+        the difference being that <code>@children</code> is always an array and always transferred to the element's children, 
+        whereas <code>@content</code> can be either a string meant for the element itself or an array meant for its children.
+        </p>
+        
+        <pre>
+        <code class="language-php">
+          
+          $PHPFront-&gt;assign('#content-box', array('@children' =&gt; array('content for childnode 1'));
+          
+        </code>
+        </pre>
+        
+        <p class="alert alert-info" data-label="Tip">
+        Use <code>@children</code> instead of <code>@content</code> where an element's children are actually implied. This makes your code more understandable
+        </p>
+        
+      </div>
+      
+      
+      <div class="subsection">
+        <h4>@render</h4>
+        <p>
+        <em>Modifies the existence of an element.</em>
+        </p>
+        <p>
+        Can change the element's type (node type), or remove the element and its children, or, better still, leave children in place and remove element from document.<br>
+        Here we go:
+        </p>
+        
+        <b>The element</b>
+        <pre>
+        <code class="language-markup">
+          
+          &lt;div id="content-box"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;small&gt;&lt;/small&gt;
+          &lt;/div&gt;
+          
+        </code>
+        </pre>
+        
+        <b>The assignment</b>
+        <pre>
+        <code class="language-php">
+          
+          // Change the element type from div to nav
+          $PHPFront-&gt;assign('#content-box', array(
+              @render =&gt; 'nav'
+          ));
+          
+        </code>
+        </pre>
+        
+        <b>Result</b>
+        <pre>
+        <code class="language-markup">
+          
+          &lt;nav id="content-box"&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;small&gt;&lt;/small&gt;
+          &lt;/nav&gt;
+          
+        </code>
+        </pre>
+        
+        <b>The assignment (2)</b>
+        <pre>
+        <code class="language-php">
+          
+          // Remove the element but leave children in place.
+          // Notice that we're simply supplying an empty string.
+          $PHPFront-&gt;assign('#content-box', array(
+              @render =&gt; ''
+          ));
+          
+        </code>
+        </pre>
+        
+        <b>Result (2)</b>
+        <pre>
+        <code class="language-markup">
+          
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;small&gt;&lt;/small&gt;
+          
+        </code>
+        </pre>
+        
+        <b>The assignment (3)</b>
+        <pre>
+        <code class="language-php">
+          
+          // Finally, remove the element and its children.
+          $PHPFront-&gt;assign('#content-box', array(
+              @render =&gt; false
+          ));
+          
+        </code>
+        </pre>
+        
+      </div>
+      
+        
+      <div class="subsection">
+        <h4>@repeat</h4>
+        <p>
+        <em>Repeats an element as specified.</em>
+        </p>
+        <p>
+        This element will be repeated next to itself as many times as needed to render the total number of items in array.
+        </p>
+        <p>
+        Consider a real case: we want to add many CSS scripts as links in the <code>&lt;head&gt;</code> section of our page. <br>
+        But we are providing just one empty <code>&lt;link&gt;</code> element. <br>
+        This will repeat itself to render whatever number of links are supplied.
+        </p>
+        
+        <b>The element</b>
+        <pre>
+        <code class="language-markup">
+          
+          &lt;head&gt;
+            &lt;title&gt;This Is Document Title&lt;/title&gt;
+            &lt;base href="http://example.com" /&gt;
+            &lt;link /&gt;
+          &lt;/head&gt;
+
+        </code>
+        </pre>
+        
+        <b>The assignment</b>
+        <pre>
+        <code class="language-php">
+          
+          $PHPFront-&gt;assign('head link', array(
+              '@repeat' =&gt; array(
+                  Array('@attr' =&gt; array('type' =&gt; 'text/css', 'href' =&gt; 'resources/main.css')),
+                  Array('@attr' =&gt; array('type' =&gt; 'text/css', 'href' =&gt; 'resources/bootstrap.min.css')), 
+                  Array('@attr' =&gt; array('type' =&gt; 'text/css', 'href' =&gt; 'resources/slider.css'))
+              )
+          ));
+          
+        </code>
+        </pre>
+        
+        <b>Result</b>
+        <pre>
+        <code class="language-markup">
+          
+          &lt;head&gt;
+            &lt;title&gt;This Is Document Title&lt;/title&gt;
+            &lt;base href="http://example.com" /&gt;
+            &lt;link type="text/css" href="resources/main.css" /&gt;
+            &lt;link type="text/css" href="resources/bootstrap.min.css" /&gt;
+            &lt;link type="text/css" href="resources/slider.css" /&gt;
+          &lt;/head&gt;
+
+        </code>
+        </pre>
+                 
+        <p class="alert alert-warning" data-label="Note">
+        Using <code>@children</code> or <code>@content</code> instead of <code>@repeat</code> in this case
+        would attempt to create 3 children for the empty <code>&lt;link&gt;</code> element, and that would be invalid markup.
+        </p>
+        
+        <p class="alert alert-info" data-label="Tip">
+        Repeats are a great way to engineer a full-grown page from few strategic elements. That amounts to a DRY (Don't Repeat Yourself) approach.
+        <br>
+        And you could create patterns and grids (or tables) with this same principle. Repeats are covered <a target="_blank" href="/documentation/working-with-phpfront/repeats/">here</a>.
+        </p>
+        
+      </div>
+        
+        
+    </div>
+      
+      
+</section>
+    
+
+
+<section class="contains_float">
+	<h2 id="summary">Summary
+</h2>
+	<ul>
+    Using the <code>PHPFront::assign()</code> function,
+    <li>
+<code>$element_selector</code> - is always a string of CSS selector or XPath query.</li>
+    <li>
+<code>$data</code> - simple argument
+      <ol>
+        <li>
+         - when a string, means content for an element. 
+        <a href="#assigning-strings">Recall</a>
+        </li>
+        <li>
+         - when an array (indexed array), means content for an element's children in the order of their position. 
+        <a href="#assigning-arrays-_-auto-population">Recall</a>
+        </li>
+        <li>
+         - when an array (associative array), means content for an element's children matching the selectors in the array. 
+        <a href="#assigning-arrays-_-associative-population">Recall</a>
+        </li>
+        <li>
+         - when a multidimensional array (nested arrays), means content for an element's children and descendants. 
+        <a href="#assigning-nested-arrays">Recall</a>
+        </li>
+      </ol>
+    </li>
+    <li>
+    <code>$data</code> - compound argument - represents a list of arguments, containing the parameters: <code>@params</code>, <code>@import</code>, <code>@content</code>, <code>@attr</code>, <code>@children</code>, <code>@render</code>, and <code>@repeat</code>. 
+    <a href="#data-as-compound-argument">Recall</a>
+    </li>
+    </ul>
+    
+    <br>
+
+    <p class="alert alert-success" data-label="Success">
+    We just completed a whole chapter.
+    </p>
+        
+</section>
+
+
+<section class="contains_float">
+	<p>
+    <a class="btn list-group-item" href="/documentation/working-with-phpfront/">Back to Working with PHPFront</a>
+    </p>
+</section>
+
+
+
+<section class="contains_float">
+	<h2 id="see-also">See Also
+</h2>
+	<ul>
+      <li>
+      <a href="/documentation/working-with-phpfront/element-selectors/">Element Selectors</a>
+      </li>
+      <li>
+      <a href="/documentation/working-with-phpfront/repeats/">Repeats</a>
+      </li>
+      <li>
+      <a href="/documentation/working-with-phpfront/setting-runtime-parameters/">Setting Runtime Parameters</a>
+      </li>
+    </ul>
+</section>
+
+        
+        
+        <!-- PAGE CONENT ENDS HERE -->
+        
+        
+        <hr>
+<!-- DISQUS COMMENTS --><div id="disqus_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	
+	var disqus_config = function () {
+		//this.page.url = PAGE_URL;
+		//this.page.identifier = PAGE_IDENTIFIER;
+	};
+	
+	(function() {
+		var d = document, s = d.createElement("script");
+		s.src = "//phpfront.disqus.com/embed.js";
+		s.setAttribute("data-timestamp", +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	
+	<noscript>
+	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+	</div>
+        <!-- END DISQUS COMMENTS -->
+        
+        <br><br><br><br>
+</div>
+          
+
+      </div>
+    </div>
+    
+    <aside class="col-md-2" id="body_aside"><br><!-- BEGIN ADS --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- PHPFront --><ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6327847773209365" data-ad-slot="6615332335"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script><!-- END ADS --></aside></main><footer><div class="contains_float container">
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">PHPFront</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/about/">Why PHPFront</a></li>
+          <li class="list-group-item"><a href="/about/features/">Features</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Documentation</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/documentation/">Getting Started</a></li>
+          <li class="list-group-item"><a href="/documentation/working-with-phpfront/">Developer Docs</a></li>
+          <li class="list-group-item"><a href="/documentation/designing-for-phpfront/">Designer Docs</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Get Involved</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.github.com/ox-harris/phpfront">Contribute on GitHub</a></li>
+          <li class="list-group-item"><a href="https://github.com/ox-harris/phpfront/issues">Report Bugs/Issues</a></li>
+          <li class="list-group-item"><a href="/get-involved/">Support PHPFront</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Community</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.twitter.com/PHPFront">Twitter</a></li>
+          <li class="list-group-item"><a href="https://www.facebook.com/PHPFront">Facebook</a></li>
+        </ul>
+</div>
+
+    </div>
+    
+    <div class="contains_float container">
+      <br><div class="text-center">© 2016 Ox-Harris Creative</div>
+      <div class="text-right" style="color:salmon"><em>This site was pre-rendered with PHPFront &amp; PHP • Built by <a href="https://www.twitter.com/ox_harris">@Ox-Harris</a></em></div>
+      
+      <br>
+</div>
+  </footer><script class="scripts" src="/js/jquery.min.js"></script><script class="scripts" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><script class="scripts" src="/js/prism.js"></script><script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('[title]').tooltip();
+	});
+	</script><script id="dsq-count-scr" src="//phpfront.disqus.com/count.js" async></script><!-- **************************************************************************** -->
+</body>
+</html>
