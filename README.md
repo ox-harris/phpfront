@@ -39,7 +39,7 @@ This folder contains the core working files. *This folder and its content are th
 Move the PHPFront folder to the frontend directory of your project or anywhere from the root directory of your project – depending on your application’s directory structure. Just make sure your application’s autoloader can pick up the PHPFront class when called – that’s if your project is bundled with an autoloader. Or simply note down the path to where you decide to put the PHPFront files so you can manually include this path during setup.
 
 # Test
-To see if PHPFront is available for use, use PHPFront::info(). This should show a few lines of info.
+To see if PHPFront is available for use, use `PHPFront::info()`. This should show a few lines of info.
 If you just want to test PHPFront or if your project is nothing more than basic, here is a test-case setup in numbered steps.
 * Create a new php file named ‘app.php’ – just the name for this example.
 * Copy the PHPFront folder to the same directory as the app.php file.
@@ -101,8 +101,8 @@ And that’s it! Preview your app.php in a browser and experience the PHPFront's
 https://ox-harris.github.io/phpfront/documentation/
 
 # Follow Up
-Visit 
 https://www.twitter.com/PHPFront.
+Visit 
 http://www.facebook.com/PHPFront
 
 # Authors
