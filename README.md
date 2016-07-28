@@ -111,7 +111,6 @@ GPL-3.0 - See LICENSE
   
 
 ----------------
-----------------
 
 # Usage Comparison with Smarty
 
@@ -133,7 +132,6 @@ GPL-3.0 - See LICENSE
   // display it
   $smarty->display('index.tpl');
   ```
-----------------
   
 #### The template - before
 
