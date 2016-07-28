@@ -71,11 +71,7 @@ Then in your app.php:
   $PHPFront->setTemplate(‘path-to-template/template.html’);
   ```
   
-* Now we can start assigning content to the respective elements in the template using PHPFront’s assign() function
-
-  The function has two parameters:
-    - i	$element_selector 		`string`
-    - ii $data 					`string|array`
+* Now we can start assigning content to the respective elements in the template using PHPFront’s `assign()` function
 
   ```php
   // For document title (title)
@@ -257,14 +253,15 @@ PHPFront
   * `PHPFront::assign()` assigns data directly to elements in a template. No extra overhead of editing the template using template syntaxes to render or loop over.
   * Template file extension is rightly .html
   * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
-  Furthermore, if you know CSS, you can even target template elements by 
-  	id (`$PHPFront->assign('#element', '...'))`,
+  Furthermore, if you know CSS, you can even target template elements by
 
-  	ClassName (`$PHPFront->assign('.element', '...'))`,
+  	id (`$PHPFront->assign('#element', $data))`,
 
-  	Attribute (`$PHPFront->assign('element[attr]', '...'))`.
+  	ClassName (`$PHPFront->assign('.element', $data))`,
+
+  	Attribute (`$PHPFront->assign('element[attr]', $data))`.
 
   And if you're a pro, find anything on the UI with xpath query: 
-  	`$PHPFront->assign('xpath:parent/child', '...')`.
+  	`$PHPFront->assign('xpath:parent/child', $data)`.
 
 You should by now see the possibilities! See the [official documentation](https://ox-harris.github.io/phpfront/documentation/), and tutorials! 
