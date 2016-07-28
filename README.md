@@ -97,10 +97,13 @@ And that’s it! Preview your app.php in a browser and experience the PHPFront's
 
 ----------------
 
-# Follow Up
-Visit https://www.twitter.com/PHPFront.
+# Documentation
+https://ox-harris.github.io/phpfront/documentation/
 
-And follow PHPFront on http://www.facebook.com/PHPFront
+# Follow Up
+Visit 
+https://www.twitter.com/PHPFront.
+http://www.facebook.com/PHPFront
 
 # Authors
   Oxford Harrison <ox_harris@yahoo.com>
