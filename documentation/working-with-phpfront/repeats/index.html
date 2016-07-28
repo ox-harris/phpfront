@@ -1,0 +1,1315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="PHPFront">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Repeats | PHPFront</title>
+<base href="/documentation/working-with-phpfront/repeats/">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin'%20type='text/css" media="all">
+<link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/templates/ox-harris/css/main.css">
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+  <header class="container"><div class="col-md-2 text-center">
+        <!-- -->
+        <a class="block active" href="/"><img src="/img/logoc.fw.png" alt="PHPFront logo"></a>
+        <!-- -->
+    </div>
+    
+    <nav class="col-md-8 navbar navbar-default"><div class="navbar-header">
+          <!-- -->
+          <!-- -->
+        </div>
+        <ul class="nav navbar-nav navbar-center">
+<li>
+            <a id="menu-about" data-toggle="dropdown" href="/about/"><!--<span class="glyphicon glyphicon-asterik"></span> -->About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-about">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="/about/features/">Features</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-possibilities/">The Possibilities</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-story/">The Story</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/">About</a></li>
+            </ul>
+</li>
+          
+          <li><a href="/download/"><!--<span class="glyphicon glyphicon-cloud-download"></span> -->Download</a></li>
+          
+          <li><a href="/documentation/" class="active"><!--<span class="glyphicon glyphicon-book"></span> -->Documentation</a></li>
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle" id="menu-community" data-toggle="dropdown" href="/community/"><!--<span class="glyphicon glyphicon-comment glyphicon-share-alt"></span> -->Community <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-community">
+<li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.twitter.com/PHPFront">Twitter</a></li>
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.facebook.com/PHPFront">Facebook</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://github.com/ox-harris/phpfront/issues">Issues</a></li>
+              <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="/community/">Community</a></li>-->
+            </ul>
+</li>
+          
+        </ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/get-involved/"><span class="glyphicon glyphicon-log-in"></span> Get Involved</a></li>
+        </ul></nav><div class="col-md-2 text-right">
+    </div>
+    
+    <div class="contains_float">
+      <div class="col-md-2 text-right">
+          <!-- -->
+          <a class="version" target="_blank" href="https://www.github.com/ox-harris/phpfront/releases">v1.0</a>
+          <!-- -->
+      </div>
+      
+      <div class="col-md-8">
+          
+        <table class="marquee"><tr>
+<td><a target="_blank" href="/documentation/">PHPFront Online Documentation now available!</a>
+</td>
+<td><a target="_blank" href="/download/">PHPFront is available on Composer: composer require ox-harris/phpfront: ~1.0</a>
+</td>
+<td><em><a target="_blank" href="mailto:phpfront@gmail.com">Contact us</a> to place an ad here...</em>
+</td>
+          </tr></table>
+</div>
+      
+      <div class="col-md-2 text-right">
+    </div>
+    </div>
+        
+  </header><br><main class="container"><nav class="col-md-2" id="main_nav" data-spy="affix" data-offset-top="360"><br><!-- --><ul class="nav nav-pills nav-stacked well" role="tablist">
+<p>Use PHPFront at <em><strong>little</strong></em> or <em><strong>zero</strong></em> learning curve!</p>
+        <br><!--
+        <li class="active">
+          <a target="_blank" href="https://github.com/ox-harris/phpfront/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        --><li class="active">
+          <a target="_blank" href="/download/"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ox-harris/phpfront"><span class="glyphicon glyphicon-link"></span> View on GitHub</a>
+        </li>
+      </ul>
+<!-- --><br><div class="scrollspy well">
+          
+        <h4>Navigation</h4>
+        
+        <ul class="nav nav-pills" role="tablist">
+<!--  class="nav nav-pills nav-stacked"--><li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#understanding-repeats">Understanding Repeats</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#concepts">Concepts</a></li>
+<li><a href="#repeat_first">Repeat-First</a></li>
+<li><a href="#repeat_last">Repeat-Last</a></li>
+<li><a href="#repeat_middle">Repeat-Middle</a></li>
+<li><a href="#repeat_nth">Repeat-Nth</a></li>
+<li><a href="#repeat_all">Repeat-All</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#setting-repeat-functions">Setting Repeat Functions</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#globally">Globally</a></li>
+<li><a href="#locally-on-elements">Locally on Elements</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#grids-and-patterns">Grids and Patterns</a>
+          	</li>
+<li>
+            
+            <a href="#summary">Summary</a>
+          	</li>
+<li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#see-also">See Also</a>
+          	</li>
+        </ul>
+</div>
+      
+    </nav><div class="col-md-8">
+      <div class="we ll">
+        <h1>
+Repeats
+          <br><small></small>
+        </h1>
+        
+        <ul class="breadcrumb">
+<li><a href="/" title="This is your homepage" data-placement="right auto">Home</a></li>
+<li><a title="Documentation" href="/documentation/">Documentation</a></li>
+<li><a title="Working With Phpfront" href="/documentation/working-with-phpfront/">Working With Phpfront</a></li>
+<li title="This is your current location" class="active">Repeats
+</li>
+</ul>
+<div id="main_content">
+<section class="contains_float">
+    <p>
+    When you supply an indexed array (array with numeric keys) as <code>$data</code> to an element, you are targeting its children. 
+    Now, where the number of items in <code>$data</code> exceeds the number of children in element, PHPFront will repeat a child (or all the children) one or more times to fully render data. 
+    </p>
+	
+    <p>
+    Intrestingly, you can even affect the repeat behaviour to create patterns and grids. That is what this chapter covers.
+    </p>
+    
+    <p class="alert alert-info" data-label="Info">
+    PHPFront implements <em><a href="#repeat_last">Repeat-Last</a></em> by default. So you do not always need to bother yourself with repeat functions.
+    </p>
+    
+    <p class="alert alert-info" data-label="Tip">
+    Compare <a target="_blank" href="/documentation/working-with-phpfront/assigning-data/#assigning-arrays-_-auto-population">Auto Population</a> 
+    and <a target="_blank" href="/documentation/working-with-phpfront/assigning-data/#assigning-arrays-_-associative-population">Associative Population</a>
+    in the chapter <em>Assigning Data</em>.
+    </p>
+    
+</section>
+
+
+<section>
+	<h2 id="understanding-repeats">Understanding Repeats
+</h2>
+              
+    <div class="section">
+    <h3 id="concepts">Concepts
+</h3>
+    
+    <p>
+    Let us first explain the key terms, using the sample HTML table below. 
+    </p>
+    
+    <pre>
+    <code class="language-markup">
+    
+      &lt;!-- Colours Table --&gt;
+      &lt;table id="users_table"&gt;
+        &lt;tr class="row-1"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="row-2"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="row-3"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      
+    </code>
+    </pre>
+
+      <style type="text/css">
+      .test_table {
+          width:100%;
+          margin-bottom:15px;
+		  background:white;
+      }
+      .test_table tr {
+          position:relative;
+          margin-top:5px;
+      }
+      .test_table td {
+		  width:12.5%;
+		  width:10%;
+          padding:1.25%;
+		  border:1px solid white;
+      }
+      </style>
+
+      
+      <ul>
+        <li>
+<b>X-Axis</b> – the line-up of direct children of the element. In this case, we have <code>&lt;tr&gt;</code> elements on this aixs</li>
+        <li>
+<b>Y-Axis</b> – the line-up of children in each direct child of the element - the element's grand-children. In this case, we have <code>&lt;td&gt;</code> on this aixs</li>
+        <li>
+<b>Repeat-Function (Repeat-Fn)</b> – the particular algorithm or pattern to follow when repeating on the X or Y axis.
+          <ul>
+            <li>Repeat-Function-X (Repeat-Fn-X) - for repeating on the X axis</li>
+            <li>Repeat-Function-Y (Repeat-Fn-Y) - for repeating on the Y axis</li>
+          </ul>
+        </li>
+        <li>
+<b>Modifier</b> - a keyword added to a function to modify its behaviour.</li>
+      </ul>    
+    
+      <p>
+      Below, we will describe the behavior of each function with their respective modifiers. <br>
+      We will also be using the <code>#users_table</code> table for most of the examples that follow. (Some examples may ommit the <code>&lt;td&gt;</code> childnodes for simplicity.)
+      </p>
+      
+      <p>
+      In the examples below, the <code>#users_table</code> has 3 <code>&lt;tr&gt;</code> childnodes, 
+      but an array of 9 rows of content has been supplied. 
+      </p>
+      
+    </div>
+    
+    
+    <div class="section">
+      <h3 id="repeat_first">Repeat-First
+</h3>
+      
+      <p>
+      <b>Description:</b> <em>Simply repeat the first element next to itself as many times as needed.</em>
+      <br>
+      <b>Modifiers:</b> <em>none</em>
+      </p>
+      
+      <p>
+      In the result below, the first row <code>.row-1</code> is what is repeated. 
+      </p>
+                
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+    
+    </div>
+    
+    <div class="section">
+      <h3 id="repeat_last">Repeat-Last
+</h3>
+      
+      <p>
+      <b>Description:</b> <em>Simply repeat the last element next to itself as many times as needed.</em>
+      <br>
+      <b>Modifiers:</b> <em>none</em>
+      </p>
+      
+      <p>
+      In the code below, the last row <code>.row-3</code> is what is repeated. 
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+    
+    </div>
+    
+    <div class="section">
+      <h3 id="repeat_middle">Repeat-Middle
+</h3>
+      
+      <p>
+      <b>Description:</b> <em>Simply repeat the middle element next to itself as many times as needed.</em>
+      <br>
+      <b>Modifiers:</b> <em>Left</em>
+      </p>
+      
+      <p>
+      In the example below, the exact middle row <code>.row-2</code> is what is repeated. 
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+    
+      <p>
+      Where the total number of existing elements is even, there will be two elements at the exact middle 
+      point. PHPFront picks the right-most element, by default. 
+      The modifier, <code>left</code>, is used to choose the left-most element.
+      </p>
+      
+    </div>
+    
+    <div class="section">
+      <h3 id="repeat_nth">Repeat-Nth
+</h3>
+      
+      <p>
+      <b>Description:</b> <em>Simply repeat the element at the specified <em>nth position</em> next to itself as many times as needed.</em>
+      <br>
+      <b>Modifiers:</b> <em>none</em>
+      </p>
+      
+      <p>
+      In the example below, our repeat function is <code>repeat_nth(2)</code>. This uses <code>.row-2</code> as the repeat element. 
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+    
+    </div>
+      
+    <div class="section">
+      <h3 id="repeat_all">Repeat-All
+</h3>
+      
+      <p>
+      <b>Description:</b> <em>Repeat all existing elements as a set, and as many times as needed.</em>
+      <br>
+      <b>Modifiers:</b> <em>Alternate, Once</em>
+      </p>
+      
+      <p>
+      In the example below, our repeat function is <code>repeat-all</code>.
+      Notice that the set of original rows is what is repeated. 
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+      
+      <p>
+      With the modifier <code>alternate</code>:
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+
+      <p>
+      With the modifiers <code>alternate,once</code>:
+      </p>
+      
+      <pre>
+      <code class="language-markup">
+      
+        &lt;!-- Colours Table --&gt;
+        &lt;table id="users_table"&gt;
+          
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+          &lt;!-- REPEATED ELEMENTS --&gt;
+          
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          
+          &lt;tr class="row-3"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-2"&gt;...&lt;/tr&gt;
+          &lt;tr class="row-1"&gt;...&lt;/tr&gt;
+          
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+
+    </div>
+    
+</section>   
+   
+    
+
+
+<section class="contains_float">
+	<h2 id="setting-repeat-functions">Setting Repeat Functions
+</h2>
+    
+    <div class="section">
+      <h3 id="globally">Globally
+</h3>
+      <p>
+      The <code>PHPFront::setRepeatFunctions()</code> function is used to set the general functions for all repeats.
+      </p>
+      
+      <pre>
+      <code class="language-php">
+        
+        PHPFront::setRepeatFunctions($repeat_fn[, $repeat_fn_y]);
+        
+      </code>
+      </pre>
+      
+      <p>
+      This function accepts one required parameter: <br>
+      <code>$repeat_fn</code> - a repeat function name. <br>
+      Then there is one optional parameter: <br>
+      <code>$repeat_fn_y</code> - a repeat function name specifically for use on the y-axis. If not specified, <code>$repeat_fn</code> is used. <br>
+      </p>
+      
+      <p>
+      Repeat-function names are given as strings and are case-insensitive. Modifiers are added with comma-separations: <code>repeat_fn,modifier</code>.
+      </p>
+
+      <p class="alert alert-info" data-label="Tip">
+      Set repeat functions to null (empty sting) to disable repeats.
+      </p>
+            
+    </div>
+    
+    <div class="section">
+      <h3 id="locally-on-elements">Locally on Elements
+</h3>
+      
+      <p>
+      Repeat functions can be included in <a target="_blank" href="/documentation/working-with-phpfront/assigning-data/#data-as-compound-argument">Compound Arguments</a> assigned to elements.
+      It will be specified in the <code>@params</code> list of runtime parameters. <br>
+      This will override the global repeat function on the target element.
+      </p>
+      
+      <pre>
+      <code class="language-php">
+        
+        PHPFront::assign($element_selector, array('@params' =&gt; array('repeat_fn' =&gt; $repeat_fn[, 'repeat_fn_y' =&gt; $repeat_fn_y])));
+        
+      </code>
+      </pre>
+      
+      <p class="alert alert-info" data-label="Tip">
+      See the Chapter <a target="_blank" href="/documentation/designing-for-phpfront/adding-special-rendering-attributes/">Adding Special Rendering Attributes</a> on setting this runtime property on element attributes.
+      </p>
+      
+    </div>
+    
+</section> 
+
+
+<section class="contains_float">
+	<h2 id="grids-and-patterns">Grids and Patterns
+</h2>
+    
+    <p>
+    A grid is an arrangement of elements on the X and Y axis. PHPFront can help you automatically create grids - both large and small - all from one or two initial elements. 
+    And it sees this as a very small task. You could even define the pattern you want using any of the repeat functions and their modifiers.
+    </p>
+    
+    <p>
+    Let us create a grid using the dry HTML table: <code>#users_table</code>. (Assume that it now has 4 rows and 3 columns. 
+    We have also added different levels of opacity on all 4 rows so you can recognize rows easily, 
+    because the order in which they appear will not always be the same. [Check the source]) 
+    We are going to pull data from the database table named <code>Users</code> and assign it to our HTML table as-is, without having to loop over the array.
+    </p>
+    
+    
+    
+    
+    
+    <br>
+    <b>The HTML table named '#users_table'</b>
+    
+    <!-- COLLAPSE -->
+    <a data-toggle="collapse" href="#table-users_table"><b>(Show Source)</b></a>
+    
+    <div class="collapse" id="table-users_table">
+          
+      <pre>
+      <code class="language-markup">
+      
+        &lt;! - - Colours Table - - &gt;
+        &lt;table class="test_table" style="width:35%"&gt;
+          &lt;tr class="row-1" style="opacity:0.45"&gt;&lt;td style="background-color:lavender"&gt;&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;&lt;/td&gt;&lt;td style="background-color:pink"&gt;&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr class="row-2" style="opacity:0.65"&gt;&lt;td style="background-color:lavender"&gt;&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;&lt;/td&gt;&lt;td style="background-color:pink"&gt;&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr class="row-3" style="opacity:0.85"&gt;&lt;td style="background-color:lavender"&gt;&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;&lt;/td&gt;&lt;td style="background-color:pink"&gt;&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr class="row-4" style="opacity:1"&gt;&lt;td style="background-color:lavender"&gt;&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;&lt;/td&gt;&lt;td style="background-color:pink"&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+          
+    </div>
+    <!-- END COLLAPSE -->
+        
+    <table class="test_table" style="width:35%">
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender"></td>
+<td style="background-color:lavenderBlush"></td>
+<td style="background-color:pink"></td>
+</tr>
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender"></td>
+<td style="background-color:lavenderBlush"></td>
+<td style="background-color:pink"></td>
+</tr>
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender"></td>
+<td style="background-color:lavenderBlush"></td>
+<td style="background-color:pink"></td>
+</tr>
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender"></td>
+<td style="background-color:lavenderBlush"></td>
+<td style="background-color:pink"></td>
+</tr>
+    </table>
+    
+    
+    
+    
+    
+    
+    
+    <br>
+    <b>PHP Code</b> 
+    
+    <!-- COLLAPSE -->
+    <a data-toggle="collapse" href="#db-table-and-php"><b>(Show Database)</b></a>
+    
+    <div class="collapse" id="db-table-and-php">
+      
+      <em>Database Table named 'Users'</em>
+      <table class="test_table" style="background:ghostWhite">
+        <tr>
+          <td>Id</td>
+<td>First_name</td>
+<td>Last_name</td>
+<td>Username</td>
+<td>Age</td>  <td>Gender</td>
+<td>Country</td>
+<td>City</td>
+        </tr>
+        
+        <tr>
+          <td>1</td>
+<td>John</td>
+<td>Doe</td>
+<td>johndoe</td>
+<td>25</td>  <td>Male</td>
+<td>USA</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>2</td>
+<td>Michael</td>
+<td>Sanderson</td>
+<td>msand</td>
+<td>35</td>  <td>Male</td>
+<td>CANADA</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>3</td>
+<td>Daniel</td>
+<td>Sway</td>
+<td>dansway</td>
+<td>45</td>  <td>Male</td>
+<td>USA</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>4</td>
+<td>John</td>
+<td>Spoon</td>
+<td>johndoe</td>
+<td>55</td>  <td>Male</td>
+<td>BRAZIL</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>5</td>
+<td>John2</td>
+<td>Doe</td>
+<td>johndoe2</td>
+<td>30</td>  <td>Male</td>
+<td>USA</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>6</td>
+<td>Michael2</td>
+<td>Sanderson2</td>
+<td>msand2</td>
+<td>40</td>  <td>Male</td>
+<td>CANADA</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>7</td>
+<td>Daniel2</td>
+<td>Sway2</td>
+<td>dansway2</td>
+<td>50</td>  <td>Male</td>
+<td>USA</td>
+<td>Unknown</td>
+        </tr>
+        <tr>
+          <td>8</td>
+<td>John2</td>
+<td>Spoon2</td>
+<td>johndoe2</td>
+<td>60</td>  <td>Male</td>
+<td>BRAZIL</td>
+<td>Unknown</td>
+        </tr>
+      </table>
+        
+    </div>
+    <!-- END COLLAPSE -->
+    
+    <pre>
+    <code class="language-php">
+      
+      // Get data from this table with the PDO class (PHP Database Object) instantiated somewhere in our app.
+      // Fetch all rows
+      $query = $this-&gt;PDO-&gt;query('SELECT id, first_name, last_name, username, age, gender, country, city FROM users');
+      $data = $query-&gt;fetchAll();
+      
+      // We set a global repeat function
+      $PHPFront-&gt;setRepeatFunctions('repeat-all,alternate');
+      
+      // We assign $data to our table element
+      $PHPFront-&gt;assign('#users_table', $data);
+      
+    </code>
+    </pre>
+    
+    
+    
+    
+    
+    
+	<br>
+    <b>Result</b>
+    
+    <!-- COLLAPSE -->
+    <a data-toggle="collapse" href="#result-1"><b>(Show Source)</b></a>
+    
+    <p>
+    With repeat_fn_x: <code>repeat-all,alternate</code>, repeat_fn_y: <code>repeat-all,alternate</code>:
+    </p>
+    
+    <div class="collapse" id="result-1">
+          
+      <pre>
+      <code class="language-markup">
+      
+        &lt;! - - Colours Table - - &gt;        
+        &lt;table id="users_table" class="test_table" style="color:white"&gt;
+          &lt;tr class="row-1" style="opacity:0.45"&gt;&lt;td style="background-color:lavender"&gt;1&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;John&lt;/td&gt;&lt;td style="background-color:pink"&gt;Doe&lt;/td&gt;&lt;td style="background-color:pink"&gt;johndoe&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;25&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;USA&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        
+          &lt;tr class="row-2" style="opacity:0.65"&gt;&lt;td style="background-color:lavender"&gt;2&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Michael&lt;/td&gt;&lt;td style="background-color:pink"&gt;Sanderson&lt;/td&gt;&lt;td style="background-color:pink"&gt;msand&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;35&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;CANADA&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        
+          &lt;tr class="row-3" style="opacity:0.85"&gt;&lt;td style="background-color:lavender"&gt;3&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Daniel&lt;/td&gt;&lt;td style="background-color:pink"&gt;Sway&lt;/td&gt;&lt;td style="background-color:pink"&gt;dansway&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;45&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;USA&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        
+          &lt;tr class="row-4" style="opacity:1"&gt;&lt;td style="background-color:lavender"&gt;4&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;John&lt;/td&gt;&lt;td style="background-color:pink"&gt;Spoon&lt;/td&gt;&lt;td style="background-color:pink"&gt;johnspoon&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;55&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;BRAZIL&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+    
+          &lt;tr class="row-4" style="opacity:1"&gt;&lt;td style="background-color:lavender"&gt;5&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;John2&lt;/td&gt;&lt;td style="background-color:pink"&gt;Doe2&lt;/td&gt;&lt;td style="background-color:pink"&gt;johndoe2&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;30&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;USA&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        
+          &lt;tr class="row-3" style="opacity:0.85"&gt;&lt;td style="background-color:lavender"&gt;6&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Michael2&lt;/td&gt;&lt;td style="background-color:pink"&gt;Sanderson2&lt;/td&gt;&lt;td style="background-color:pink"&gt;msand2&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;40&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;CANADA&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        
+          &lt;tr class="row-2" style="opacity:0.65"&gt;&lt;td style="background-color:lavender"&gt;7&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Daniel2&lt;/td&gt;&lt;td style="background-color:pink"&gt;Sway2&lt;/td&gt;&lt;td style="background-color:pink"&gt;dansway2&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;50&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;USA&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        
+          &lt;tr class="row-1" style="opacity:0.45"&gt;&lt;td style="background-color:lavender"&gt;8&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;John2&lt;/td&gt;&lt;td style="background-color:pink"&gt;Spoon2&lt;/td&gt;&lt;td style="background-color:pink"&gt;johnspoon2&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;60&lt;/td&gt;    &lt;td style="background-color:lavender"&gt;Male&lt;/td&gt;&lt;td style="background-color:lavender"&gt;BRAZIL&lt;/td&gt;&lt;td style="background-color:lavenderBlush"&gt;Unknown&lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+        
+      </code>
+      </pre>
+          
+    </div>
+    <!-- END COLLAPSE -->
+    
+    <table id="users_table" class="test_table" style="color:white">
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">1</td>
+<td style="background-color:lavenderBlush">John</td>
+<td style="background-color:pink">Doe</td>
+<td style="background-color:pink">johndoe</td>
+<td style="background-color:lavenderBlush">25</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">USA</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">2</td>
+<td style="background-color:lavenderBlush">Michael</td>
+<td style="background-color:pink">Sanderson</td>
+<td style="background-color:pink">msand</td>
+<td style="background-color:lavenderBlush">35</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">CANADA</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">3</td>
+<td style="background-color:lavenderBlush">Daniel</td>
+<td style="background-color:pink">Sway</td>
+<td style="background-color:pink">dansway</td>
+<td style="background-color:lavenderBlush">45</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">USA</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">4</td>
+<td style="background-color:lavenderBlush">John</td>
+<td style="background-color:pink">Spoon</td>
+<td style="background-color:pink">johnspoon</td>
+<td style="background-color:lavenderBlush">55</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">BRAZIL</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">5</td>
+<td style="background-color:lavenderBlush">John2</td>
+<td style="background-color:pink">Doe2</td>
+<td style="background-color:pink">johndoe2</td>
+<td style="background-color:lavenderBlush">30</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">USA</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">6</td>
+<td style="background-color:lavenderBlush">Michael2</td>
+<td style="background-color:pink">Sanderson2</td>
+<td style="background-color:pink">msand2</td>
+<td style="background-color:lavenderBlush">40</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">CANADA</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">7</td>
+<td style="background-color:lavenderBlush">Daniel2</td>
+<td style="background-color:pink">Sway2</td>
+<td style="background-color:pink">dansway2</td>
+<td style="background-color:lavenderBlush">50</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">USA</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">8</td>
+<td style="background-color:lavenderBlush">John2</td>
+<td style="background-color:pink">Spoon2</td>
+<td style="background-color:pink">johnspoon2</td>
+<td style="background-color:lavenderBlush">60</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavender">BRAZIL</td>
+<td style="background-color:lavenderBlush">Unknown</td>
+</tr>
+    </table>
+    
+    
+    <br>
+
+    <p>
+    With repeat_fn_x: <code>repeat-all,alternate</code>, repeat_fn_y: <code>repeat-first</code>:
+    </p>
+    
+    <table id="users_table" class="test_table" style="color:white">
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">1</td>
+<td style="background-color:lavender">John</td>
+<td style="background-color:lavender">Doe</td>
+<td style="background-color:lavender">johndoe</td>
+<td style="background-color:lavender">25</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">2</td>
+<td style="background-color:lavender">Michael</td>
+<td style="background-color:lavender">Sanderson</td>
+<td style="background-color:lavender">msand</td>
+<td style="background-color:lavender">35</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">CANADA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">3</td>
+<td style="background-color:lavender">Daniel</td>
+<td style="background-color:lavender">Sway</td>
+<td style="background-color:lavender">dansway</td>
+<td style="background-color:lavender">45</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">4</td>
+<td style="background-color:lavender">John</td>
+<td style="background-color:lavender">Spoon</td>
+<td style="background-color:lavender">johnspoon</td>
+<td style="background-color:lavender">55</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">BRAZIL</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">5</td>
+<td style="background-color:lavender">John2</td>
+<td style="background-color:lavender">Doe2</td>
+<td style="background-color:lavender">johndoe2</td>
+<td style="background-color:lavender">30</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">6</td>
+<td style="background-color:lavender">Michael2</td>
+<td style="background-color:lavender">Sanderson2</td>
+<td style="background-color:lavender">msand2</td>
+<td style="background-color:lavender">40</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">CANADA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">7</td>
+<td style="background-color:lavender">Daniel2</td>
+<td style="background-color:lavender">Sway2</td>
+<td style="background-color:lavender">dansway2</td>
+<td style="background-color:lavender">50</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">8</td>
+<td style="background-color:lavender">John2</td>
+<td style="background-color:lavender">Spoon2</td>
+<td style="background-color:lavender">johnspoon2</td>
+<td style="background-color:lavender">60</td>    <td style="background-color:lavender">Male</td>
+<td style="background-color:lavenderBlush">BRAZIL</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    </table>
+    
+    <br>
+
+    <p>
+    With repeat_fn_x: <code>repeat-all</code>, repeat_fn_y: <code>repeat-last</code>:
+    </p>
+    
+    <table id="users_table" class="test_table" style="color:white">
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">1</td>
+<td style="background-color:lavenderBlush">John</td>
+<td style="background-color:pink">Doe</td>
+<td style="background-color:pink">johndoe</td>
+<td style="background-color:pink">25</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">2</td>
+<td style="background-color:lavenderBlush">Michael</td>
+<td style="background-color:pink">Sanderson</td>
+<td style="background-color:pink">msand</td>
+<td style="background-color:pink">35</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">CANADA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">3</td>
+<td style="background-color:lavenderBlush">Daniel</td>
+<td style="background-color:pink">Sway</td>
+<td style="background-color:pink">dansway</td>
+<td style="background-color:pink">45</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">4</td>
+<td style="background-color:lavenderBlush">John</td>
+<td style="background-color:pink">Spoon</td>
+<td style="background-color:pink">johnspoon</td>
+<td style="background-color:pink">55</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">BRAZIL</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">5</td>
+<td style="background-color:lavenderBlush">John2</td>
+<td style="background-color:pink">Doe2</td>
+<td style="background-color:pink">johndoe2</td>
+<td style="background-color:pink">30</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">6</td>
+<td style="background-color:lavenderBlush">Michael2</td>
+<td style="background-color:pink">Sanderson2</td>
+<td style="background-color:pink">msand2</td>
+<td style="background-color:pink">40</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">CANADA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">7</td>
+<td style="background-color:lavenderBlush">Daniel2</td>
+<td style="background-color:pink">Sway2</td>
+<td style="background-color:pink">dansway2</td>
+<td style="background-color:pink">50</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">8</td>
+<td style="background-color:lavenderBlush">John2</td>
+<td style="background-color:pink">Spoon2</td>
+<td style="background-color:pink">johnspoon2</td>
+<td style="background-color:pink">60</td>    <td style="background-color:pink">Male</td>
+<td style="background-color:pink">BRAZIL</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    </table>
+
+    <br>
+
+    <p>
+    With repeat_fn_x: <code>repeat-all</code>, repeat_fn_y: <code>repeat-middle</code>:
+    </p>
+    
+    <table id="users_table" class="test_table" style="color:white">
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">1</td>
+<td style="background-color:lavenderBlush">John</td>
+<td style="background-color:lavenderBlush">Doe</td>
+<td style="background-color:lavenderBlush">johndoe</td>
+<td style="background-color:lavenderBlush">25</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">2</td>
+<td style="background-color:lavenderBlush">Michael</td>
+<td style="background-color:lavenderBlush">Sanderson</td>
+<td style="background-color:lavenderBlush">msand</td>
+<td style="background-color:lavenderBlush">35</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">CANADA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">3</td>
+<td style="background-color:lavenderBlush">Daniel</td>
+<td style="background-color:lavenderBlush">Sway</td>
+<td style="background-color:lavenderBlush">dansway</td>
+<td style="background-color:lavenderBlush">45</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">4</td>
+<td style="background-color:lavenderBlush">John</td>
+<td style="background-color:lavenderBlush">Spoon</td>
+<td style="background-color:lavenderBlush">johnspoon</td>
+<td style="background-color:lavenderBlush">55</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">BRAZIL</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+
+      <tr class="row-1" style="opacity:0.45">
+<td style="background-color:lavender">5</td>
+<td style="background-color:lavenderBlush">John2</td>
+<td style="background-color:lavenderBlush">Doe2</td>
+<td style="background-color:lavenderBlush">johndoe2</td>
+<td style="background-color:lavenderBlush">30</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-2" style="opacity:0.65">
+<td style="background-color:lavender">6</td>
+<td style="background-color:lavenderBlush">Michael2</td>
+<td style="background-color:lavenderBlush">Sanderson2</td>
+<td style="background-color:lavenderBlush">msand2</td>
+<td style="background-color:lavenderBlush">40</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">CANADA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-3" style="opacity:0.85">
+<td style="background-color:lavender">7</td>
+<td style="background-color:lavenderBlush">Daniel2</td>
+<td style="background-color:lavenderBlush">Sway2</td>
+<td style="background-color:lavenderBlush">dansway2</td>
+<td style="background-color:lavenderBlush">50</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">USA</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    
+      <tr class="row-4" style="opacity:1">
+<td style="background-color:lavender">8</td>
+<td style="background-color:lavenderBlush">John2</td>
+<td style="background-color:lavenderBlush">Spoon2</td>
+<td style="background-color:lavenderBlush">johnspoon2</td>
+<td style="background-color:lavenderBlush">60</td>    <td style="background-color:lavenderBlush">Male</td>
+<td style="background-color:lavenderBlush">BRAZIL</td>
+<td style="background-color:pink">Unknown</td>
+</tr>
+    </table>
+
+</section>
+
+
+
+<section class="contains_float">
+	<h2 id="summary">Summary
+</h2>
+	<ul>
+      <li>
+      Repeat will take place when an indexed array is assigned to target an element's children and when the items in the array outnumbers the children.</li>,
+      <li>
+      Repeat Functions can be set globally with the <code>PHPFront::setRepeatFunctions()</code> function; 
+      and locally on individual elements by including it in the <code>@params</code> list of Compound Arguments assigned them.
+      <a href="#setting-repeat-functions">Recall</a>
+      </li>
+      <li>
+      There are six repeat functions: <code><a href="#repeat_first">repeat-first</a></code>, <code><a href="#repeat_last">repeat-last</a></code>, 
+      <code><a href="#repeat_middle">repeat-middle</a></code>, <code><a href="#repeat_nth">repeat-nth</a></code>, 
+      <code><a href="#repeat_all">repeat-all</a></code>, and <code><a href="#shuffle_data">shuffle-data</a></code>. 
+      </li>
+    </ul>
+    
+    <br>
+
+    <p class="alert alert-success" data-label="Wow">
+    We've done a very nice job covering this chapter!
+    </p>
+        
+</section>
+
+
+<section class="contains_float">
+	<p>
+    <a class="btn list-group-item" href="/documentation/working-with-phpfront/">Back to Working with PHPFront</a>
+    </p>
+</section>
+
+
+
+<section class="contains_float">
+	<h2 id="see-also">See Also
+</h2>
+	<ul>
+      <li>
+      <a href="/documentation/working-with-phpfront/assigning-data/#assigning-arrays-_-auto-population">Assigning Arrays - Auto Population</a>
+      </li>
+      <li>
+      <a href="/documentation/working-with-phpfront/setting-runtime-parameters/">Setting Runtime Parameters</a>
+      </li>
+    </ul>
+</section>
+
+        
+        
+        <!-- PAGE CONENT ENDS HERE -->
+        
+        
+        <hr>
+<!-- DISQUS COMMENTS --><div id="disqus_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	
+	var disqus_config = function () {
+		//this.page.url = PAGE_URL;
+		//this.page.identifier = PAGE_IDENTIFIER;
+	};
+	
+	(function() {
+		var d = document, s = d.createElement("script");
+		s.src = "//phpfront.disqus.com/embed.js";
+		s.setAttribute("data-timestamp", +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	
+	<noscript>
+	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+	</div>
+        <!-- END DISQUS COMMENTS -->
+        
+        <br><br><br><br>
+</div>
+          
+
+      </div>
+    </div>
+    
+    <aside class="col-md-2" id="body_aside"><br><!-- BEGIN ADS --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- PHPFront --><ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6327847773209365" data-ad-slot="6615332335"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script><!-- END ADS --></aside></main><footer><div class="contains_float container">
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">PHPFront</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/about/">Why PHPFront</a></li>
+          <li class="list-group-item"><a href="/about/features/">Features</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Documentation</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/documentation/">Getting Started</a></li>
+          <li class="list-group-item"><a href="/documentation/working-with-phpfront/">Developer Docs</a></li>
+          <li class="list-group-item"><a href="/documentation/designing-for-phpfront/">Designer Docs</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Get Involved</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.github.com/ox-harris/phpfront">Contribute on GitHub</a></li>
+          <li class="list-group-item"><a href="https://github.com/ox-harris/phpfront/issues">Report Bugs/Issues</a></li>
+          <li class="list-group-item"><a href="/get-involved/">Support PHPFront</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Community</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.twitter.com/PHPFront">Twitter</a></li>
+          <li class="list-group-item"><a href="https://www.facebook.com/PHPFront">Facebook</a></li>
+        </ul>
+</div>
+
+    </div>
+    
+    <div class="contains_float container">
+      <br><div class="text-center">© 2016 Ox-Harris Creative</div>
+      <div class="text-right" style="color:salmon"><em>This site was pre-rendered with PHPFront &amp; PHP • Built by <a href="https://www.twitter.com/ox_harris">@Ox-Harris</a></em></div>
+      
+      <br>
+</div>
+  </footer><script class="scripts" src="/js/jquery.min.js"></script><script class="scripts" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><script class="scripts" src="/js/prism.js"></script><script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('[title]').tooltip();
+	});
+	</script><script id="dsq-count-scr" src="//phpfront.disqus.com/count.js" async></script><!-- **************************************************************************** -->
+</body>
+</html>
