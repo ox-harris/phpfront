@@ -41,14 +41,13 @@ Then in your app.php:
 
 * Include the PHPFront class.
   
-  <pre class="language-php">
+  ```php
   Include ‘PHPFront/lib/PHPFront.php’;
 
   // If you stored the PHPFront folder in a different location, your include path would change.
   // Where ‘path-to-PHPFront’ is your actual path to where you stored PHPFront
   Include ‘path-to-PHPFront/PHPFront/lib/PHPFront.php’;
-
-  </pre>
+  ```
 ----------------
 
 * PHPFront is now available to our app.php script, so we instantiate it:
