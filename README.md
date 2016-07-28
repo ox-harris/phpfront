@@ -1,5 +1,7 @@
 # PHPFront
-*Well-Engineered for Templating. Uses no template syntaxes!* [I'm an inline-style link](https://ox-harris.github.io/PHPFront)
+*Well-Engineered for Templating. Uses no template syntaxes!* [ox-harris.github.io/phpfront](https://ox-harris.github.io/phpfront)
+
+-----------------------------------------------
 
 PHPFront is a fully-featured template engine for PHP.
 It facilitates the globally-held standard of code separation in application building.
@@ -42,10 +44,10 @@ Then in your app.php:
   <pre>
   Include ‘PHPFront/lib/PHPFront.php’;
 
-  If you stored the PHPFront folder in a different location, your include path would change.
+  // If you stored the PHPFront folder in a different location, your include path would change.
+  // Where ‘path-to-PHPFront’ is your actual path to where you stored PHPFront
   Include ‘path-to-PHPFront/PHPFront/lib/PHPFront.php’;
 
-  // Where ‘path-to-PHPFront’ is your actual path to where you stored PHPFront
   </pre>
 ----------------
 
