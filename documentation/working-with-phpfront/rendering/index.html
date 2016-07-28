@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="PHPFront">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Rendering | PHPFront</title>
+<base href="/documentation/working-with-phpfront/rendering/">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin'%20type='text/css" media="all">
+<link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/templates/ox-harris/css/main.css">
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+  <header class="container"><div class="col-md-2 text-center">
+        <!-- -->
+        <a class="block active" href="/"><img src="/img/logoc.fw.png" alt="PHPFront logo"></a>
+        <!-- -->
+    </div>
+    
+    <nav class="col-md-8 navbar navbar-default"><div class="navbar-header">
+          <!-- -->
+          <!-- -->
+        </div>
+        <ul class="nav navbar-nav navbar-center">
+<li>
+            <a id="menu-about" data-toggle="dropdown" href="/about/"><!--<span class="glyphicon glyphicon-asterik"></span> -->About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-about">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="/about/features/">Features</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-possibilities/">The Possibilities</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-story/">The Story</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/">About</a></li>
+            </ul>
+</li>
+          
+          <li><a href="/download/"><!--<span class="glyphicon glyphicon-cloud-download"></span> -->Download</a></li>
+          
+          <li><a href="/documentation/" class="active"><!--<span class="glyphicon glyphicon-book"></span> -->Documentation</a></li>
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle" id="menu-community" data-toggle="dropdown" href="/community/"><!--<span class="glyphicon glyphicon-comment glyphicon-share-alt"></span> -->Community <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-community">
+<li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.twitter.com/PHPFront">Twitter</a></li>
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.facebook.com/PHPFront">Facebook</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://github.com/ox-harris/phpfront/issues">Issues</a></li>
+              <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="/community/">Community</a></li>-->
+            </ul>
+</li>
+          
+        </ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/get-involved/"><span class="glyphicon glyphicon-log-in"></span> Get Involved</a></li>
+        </ul></nav><div class="col-md-2 text-right">
+    </div>
+    
+    <div class="contains_float">
+      <div class="col-md-2 text-right">
+          <!-- -->
+          <a class="version" target="_blank" href="https://www.github.com/ox-harris/phpfront/releases">v1.0</a>
+          <!-- -->
+      </div>
+      
+
+      <div class="col-md-8">
+          
+        <table class="marquee"><tr>
+<td><a target="_blank" href="/documentation/">PHPFront Online Documentation now available!</a>
+</td>
+<td><a target="_blank" href="/download/">PHPFront is available on Composer: composer require ox-harris/phpfront: ~1.0</a>
+</td>
+<td><em><a target="_blank" href="mailto:phpfront@gmail.com">Contact us</a> to place an ad here...</em>
+</td>
+          </tr></table>
+</div>
+      
+      <div class="col-md-2 text-right">
+    </div>
+    </div>
+        
+  </header><br><main class="container"><nav class="col-md-2" id="main_nav" data-spy="affix" data-offset-top="360"><br><!-- --><ul class="nav nav-pills nav-stacked well" role="tablist">
+<p>Use PHPFront at <em><strong>little</strong></em> or <em><strong>zero</strong></em> learning curve!</p>
+        <br><!--
+        <li class="active">
+          <a target="_blank" href="https://github.com/ox-harris/phpfront/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        --><li class="active">
+          <a target="_blank" href="/download/"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ox-harris/phpfront"><span class="glyphicon glyphicon-link"></span> View on GitHub</a>
+        </li>
+      </ul>
+<!-- --><br><div class="scrollspy well">
+          
+        <h4>Navigation</h4>
+        
+        <ul class="nav nav-pills" role="tablist">
+<!--  class="nav nav-pills nav-stacked"--><li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#function">Function</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#usage">Usage</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#reparse-rendering">Reparse Rendering</a>
+          	</li>
+<li>
+            
+            <a href="#summary">Summary</a>
+          	</li>
+<li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#see-also">See Also</a>
+          	</li>
+        </ul>
+</div>
+      
+    </nav><div class="col-md-8">
+      <div class="we ll">
+        <h1>
+Rendering
+          <br><small></small>
+        </h1>
+        
+        <ul class="breadcrumb">
+<li><a href="/" title="This is your homepage" data-placement="right auto">Home</a></li>
+<li><a title="Documentation" href="/documentation/">Documentation</a></li>
+<li><a title="Working With Phpfront" href="/documentation/working-with-phpfront/">Working With Phpfront</a></li>
+<li title="This is your current location" class="active">Rendering
+</li>
+</ul>
+<div id="main_content">
+<section class="contains_float">
+	<p>
+    <em>Create the HTML output from the set template</em>
+    </p>
+    
+    <p>
+    The <code>PHPFront::render()</code> function is called to render all assigned data, imports and includes into a template.
+    This will print a well-formed HTML output with line-breaks and indentation.
+     </p>
+    
+    <p class="alert alert-info" data-label="Tip">
+    <code>PHPFront::$allow_html_formatting</code> can be set to <code>false</code> to disable line-breaks and indentation.
+    </p>
+      
+</section>
+
+
+
+<section>
+	<h2 id="function">Function
+</h2>
+  
+    <pre>
+    <code class="language-php">
+      
+      PHPFront::render([$print = true]);
+      
+    </code>
+    </pre>
+    
+    <p>
+    This function accepts one optional parameter, <code>$print</code> – a Boolean <code>true</code> or <code>false</code> that 
+    tells whether to actually print the rendered template or simply return it as a string. The default is <code>true</code> – print the template
+    </p>
+          
+    <div class="section">
+      <h3 id="usage">Usage
+</h3>
+      
+      <pre>
+      <code class="language-php">
+        
+        // Render and print our template
+        $PHPFront-&gt;render();
+        
+        // Render but return document as string for further use
+        $document = $PHPFront-&gt;render(false);
+        echo $document;
+        
+      </code>
+      </pre>
+      
+      <hr>
+      
+      <p>
+      A similar function is <code>PHPFront::getRendered()</code>. <br>
+      This function works like <code>PHPFront::render()</code> except that it always returns the ouput and never prints.
+      </p>
+      
+      <pre>
+      <code class="language-php">
+        
+        PHPFront::getRendered([$element_selector = null]);
+        
+      </code>
+      </pre>
+      
+      <p>
+      The optional <code>$element_selector</code> parameter specifies elements to return.
+      </p>
+      
+      <pre>
+      <code class="language-php">
+        
+        // Return menu list-items from the document for further use
+        $menu_list_elements = $PHPFront-&gt;getRendered('#menu li');
+        echo $menu_list_elements;
+        
+      </code>
+      </pre>
+      
+      <p class="alert alert-info" data-label="Info">
+      If the last template set has not been rendered, <code>PHPFront::getRendered()</code> will automatically render it before returning the elements specified, if any.
+      </p>
+      
+      <p class="alert alert-info" data-label="Info">
+      If the optional <code>$element_selector</code> parameter was omitted or is null, it would get the whole rendered document - just like <code>PHPFront::render(true)</code>.
+      </p>
+      
+    </div>
+      
+</section>
+
+
+
+<section>
+	<h2 id="reparse-rendering">Reparse Rendering
+</h2>
+    
+    <p>
+    With PHPFront, you could choose to assign data to yet another assigned data. 
+    This happens when an inserted content contains HTML markup, 
+    and you assigned data with selectors that target the elements within these markup.
+    </p>
+    
+    <p>
+    To enable this mode, set the <code>PHPFront::$parse_inserted_data</code> property to true. 
+    PHPFront will render the template a second time finding the inserted markups and setting their assigned data. Elements rendered on the first round will be ignored.
+    </p>
+    
+    <p>
+    Here is an example, with some data obtained from database:
+    </p>
+    
+    <pre>
+    <code class="language-php">
+      
+	  // Assume that $db_result['article'] contains some markup: 
+	  $db_result['article'] = 'This is an excerpt from &lt;span data-user_info="first_name"&gt;&lt;/span&gt;\'s article.';
+      
+	  $author_name = $db_result['first_name'];
+      
+    </code>
+    </pre>
+    
+    <b>Reparse Rendering:</b>
+    <pre>
+    <code class="language-php">
+      
+      // Assign content to all span elements where the author's name should appear.
+      // Target ALL the elements in the main template and those that are yet to be inserted
+      $PHPFront-&gt;assign('span[data-user_info="first_name"]', $author_name);
+      
+      // The content of this $db_result['article'] will pick up the $author_name too
+      $PHPFront-&gt;assign('#article_wrapper', $db_result['article']);
+      
+      // The main template
+      $PHPFront-&gt;setTemplate('../../resources/template.html');
+      
+      // The setting
+      $PHPFront-&gt;parse_inserted_data = true;
+      
+      // Render
+      $PHPFront-&gt;render();
+      
+    </code>
+    </pre>
+    
+    <b>Result:</b>
+    <pre>
+    <code class="language-markup">
+      
+      &lt;…&gt;
+        &lt;div id="article_wrapper"&gt; This is an excerpt from &lt;span data-user_info="first_name"&gt;John Doe&lt;/span&gt;'s article
+        &lt;/div&gt;
+      &lt;/…&gt;
+      
+    </code>
+    </pre>
+    
+    <p>
+    But there is another way to do this.
+    </p>
+    
+    <b>Alternative:</b>
+    <pre>
+    <code class="language-php">
+    
+      // 1. We set the markup as a template first
+      $PHPFront-&gt;setTemplate($db_result['article']);
+      
+      // 2. We want the author's name to show inside that span element in our markup
+      $PHPFront-&gt;assign('span[data-user_info="first_name"]', $author_name);
+      
+      // 3. Save our string to a variable, do not print
+      $pre_rendered_article = $PHPFront-&gt;render(false);
+      
+      // Finally, process the main template
+      
+      // 1. We set the main template as a file
+      $PHPFront-&gt;setTemplate('../../resources/template.html');
+      
+      // 2. Send our $pre_rendered_article to an element in the main template
+      $PHPFront-&gt;assign('#article_wrapper', $pre_rendered_article);
+      
+      // 3. Render and print
+      $PHPFront-&gt;render();
+      
+    </code>
+    </pre>
+    
+    <p>
+    The <code>#article_wrapper</code> element will look like the result above. 
+    Only that this alternative method will require the same process for each propsective markup string. 
+    Where performance is critical, this alternative should be used instead of reparse-rendering.
+    </p>
+      
+
+
+</section>
+
+
+<section class="contains_float">
+	<h2 id="summary">Summary
+</h2>
+	<ul>
+      <li>
+      The <code>PHPFront::render()</code> outputs a HTML string representing the set template with the assigned data, imports and includes all inserted.
+      <a href="#function">Recall</a>
+      </li>
+      <li>
+      <code>PHPFront::render()</code> will print output by default, eliminating the need to manually <code>echo</code> the output.
+      <a href="#function">Recall</a>
+      </li>
+      <li>
+      Reparse Rendering can set data on other inserted elements.
+      <a href="#reparse-rendering">Recall</a>
+      </li>
+    </ul>
+    
+    <br>
+
+    <p class="alert alert-success" data-label="Great">
+    We've covered this key API in PHPFront!
+    </p>
+        
+</section>
+
+
+<section class="contains_float">
+	<p>
+    <a class="btn list-group-item" href="/documentation/working-with-phpfront/">Back to Working with PHPFront</a>
+    </p>
+</section>
+
+
+
+<section class="contains_float">
+	<h2 id="see-also">See Also
+</h2>
+	<ul>
+      <li>
+      <a href="/documentation/working-with-phpfront/assigning-data/">Assigning Data</a>
+      </li>
+    </ul>
+</section>
+
+        
+        
+        <!-- PAGE CONENT ENDS HERE -->
+        
+        
+        <hr>
+<!-- DISQUS COMMENTS --><div id="disqus_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	
+	var disqus_config = function () {
+		//this.page.url = PAGE_URL;
+		//this.page.identifier = PAGE_IDENTIFIER;
+	};
+	
+	(function() {
+		var d = document, s = d.createElement("script");
+		s.src = "//phpfront.disqus.com/embed.js";
+		s.setAttribute("data-timestamp", +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	
+	<noscript>
+	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+	</div>
+        <!-- END DISQUS COMMENTS -->
+        
+        <br><br><br><br>
+</div>
+          
+
+      </div>
+    </div>
+    
+    <aside class="col-md-2" id="body_aside"><br><!-- BEGIN ADS --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- PHPFront --><ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6327847773209365" data-ad-slot="6615332335"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script><!-- END ADS --></aside></main><footer><div class="contains_float container">
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">PHPFront</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/about/">Why PHPFront</a></li>
+          <li class="list-group-item"><a href="/about/features/">Features</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Documentation</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/documentation/">Getting Started</a></li>
+          <li class="list-group-item"><a href="/documentation/working-with-phpfront/">Developer Docs</a></li>
+          <li class="list-group-item"><a href="/documentation/designing-for-phpfront/">Designer Docs</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Get Involved</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.github.com/ox-harris/phpfront">Contribute on GitHub</a></li>
+          <li class="list-group-item"><a href="https://github.com/ox-harris/phpfront/issues">Report Bugs/Issues</a></li>
+          <li class="list-group-item"><a href="/get-involved/">Support PHPFront</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Community</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.twitter.com/PHPFront">Twitter</a></li>
+          <li class="list-group-item"><a href="https://www.facebook.com/PHPFront">Facebook</a></li>
+        </ul>
+</div>
+
+    </div>
+    
+    <div class="contains_float container">
+      <br><div class="text-center">© 2016 Ox-Harris Creative</div>
+      <div class="text-right" style="color:salmon"><em>This site was pre-rendered with PHPFront &amp; PHP • Built by <a href="https://www.twitter.com/ox_harris">@Ox-Harris</a></em></div>
+      
+      <br>
+</div>
+  </footer><script class="scripts" src="/js/jquery.min.js"></script><script class="scripts" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><script class="scripts" src="/js/prism.js"></script><script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('[title]').tooltip();
+	});
+	</script><script id="dsq-count-scr" src="//phpfront.disqus.com/count.js" async></script><!-- **************************************************************************** -->
+</body>
+</html>
