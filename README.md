@@ -27,10 +27,12 @@ Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot 
   ```composer
   composer require ox-harris/phpfront: ~1.0
   ```
-### Github
-  [](https://github.com/ox-harris/phpfront/releases)
+### From Github
+
+  [github.com/ox-harris/phpfront/releases](https://github.com/ox-harris/phpfront/releases)
 
 **Folder Structure**
+
 Extract the PHPFront zip file and you’ll discover the most important folder for use named ‘lib’.
 
 This folder contains the core working files. *This folder and its content are things you SHOULD NOT edit*.
@@ -136,7 +138,7 @@ GPL-3.0 - See LICENSE
   
 #### The template - before
 
-  ```markup
+  ```html
   <html>
   <head>
   <title>Info</title>
@@ -155,7 +157,7 @@ GPL-3.0 - See LICENSE
   
 #### The template - after
 
-```markup
+```html
   <html>
   <head>
 	<title>Info</title>
@@ -195,7 +197,7 @@ GPL-3.0 - See LICENSE
   
 #### The template - before
 
-  ```markup
+  ```html
   <html>
   <head>
 	<title>Info</title>
@@ -214,7 +216,7 @@ GPL-3.0 - See LICENSE
   
 #### The template - after
 
-  ```markup
+  ```html
   <html>
   <head>
 	<title>Info</title>
