@@ -52,7 +52,6 @@ Then in your app.php:
 * PHPFront is now available to our app.php script, so we instantiate it:
   ```php
   $PHPFront = new PHPFront;
-  // The PHPFront’s __constructor accepts no arguments
   ```
 
 * Now, we hand PHPFront the template to use - our template.html page
@@ -67,10 +66,10 @@ Then in your app.php:
 * Now we can start assigning content to the respective elements in the template using PHPFront’s assign() function
 
   The function accepts to parameters:
-  ```php
     - i	$element_selector 		string
     - ii $data 					string|array
   
+  ```php
   // For document title (title)
   $PHPFront->assign(‘title’, ‘This is document title’);
 
@@ -100,7 +99,7 @@ And follow PHPFront on http://www.facebook.com/PHPFront
   
 
 # License
-GPL-3.0 - See the LICENSE.md file for details
+GPL-3.0 - See LICENSE
   
 
 ----------------
@@ -131,20 +130,20 @@ GPL-3.0 - See the LICENSE.md file for details
 #### The template - before
 
   ```markup
-  \<html\>
-  \<head\>
-  \<title\>Info\</title\>
-  \</head\>
-  \<body\>
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Info&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
 
-	\<pre\>
+	&lt;pre&gt;
 	  User Information:
 	  Name: {$name}
 	  Address: {$address}
-	\</pre\>
+	&lt;/pre&gt;
 
-  \</body\>
-  \</html\>
+  &lt;/body&gt;
+  &lt;/html&gt;
   ```
   
 #### The template - after
