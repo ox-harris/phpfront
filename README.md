@@ -29,9 +29,7 @@ Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot 
   ```
 ### From Github
 
-  [github.com/ox-harris/phpfront/releases](https://github.com/ox-harris/phpfront/releases)
-
-**Folder Structure**
+  Download from Github: [github.com/ox-harris/phpfront/releases](https://github.com/ox-harris/phpfront/releases)
 
 Extract the PHPFront zip file and you’ll discover the most important folder for use named ‘lib’.
 This folder contains the core working files. *This folder and its content are things you SHOULD NOT edit*.
@@ -61,15 +59,6 @@ Then in your app.php:
   ```php
   $PHPFront = new PHPFront;
   ```
-
-* Now, we hand PHPFront the template to use - our template.html page
-  ```php
-  $PHPFront->setTemplate(‘template.html’);
-
-  // If your stored template.html in a different location, your path would change.
-  // Where ‘path-to-template is your actual path to where you stored template.html
-  $PHPFront->setTemplate(‘path-to-template/template.html’);
-  ```
   
 * Now we can start assigning content to the respective elements in the template using PHPFront’s `assign()` function
 
@@ -82,6 +71,15 @@ Then in your app.php:
 
   // For page paragraph (p)
   $PHPFront->assign(‘p’, ‘Here is my first PHPFront project’);
+  ```
+
+* Now, we hand PHPFront the template to use - our template.html page
+  ```php
+  $PHPFront->setTemplate(‘template.html’);
+
+  // If your stored template.html in a different location, your path would change.
+  // Where ‘path-to-template is your actual path to where you stored template.html
+  $PHPFront->setTemplate(‘path-to-template/template.html’);
   ```
   
 * Finally, we render our page using PHPFront’s render() function
@@ -102,7 +100,7 @@ All bugs, feature requests, pull requests, feedback, etc., are welcome. [Create 
 # Follow Up
 https://www.twitter.com/PHPFront.
 Visit 
-http://www.facebook.com/PHPFront
+http://www.facebook.com/OxHarrisFront
 
 # Authors
   Oxford Harrison <ox_harris@yahoo.com>
@@ -253,6 +251,7 @@ PHPFront
   * `PHPFront::assign()` assigns data directly to elements in a template. No extra overhead of editing the template using template syntaxes to render or loop over.
   * Template file extension is rightly .html
   * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
+
   Furthermore, if you know CSS, you can even target template elements by
 
   	id: `$PHPFront->assign('#element', $data)`,
@@ -262,6 +261,7 @@ PHPFront
   	Attribute: `$PHPFront->assign('element[attr]', $data)`.
 
   And if you're a pro, find anything on the UI with XPATH query:
+
   	XPATH: `$PHPFront->assign('xpath:parent/child', $data)`.
 
 You should by now see the possibilities! See the [official documentation](https://ox-harris.github.io/phpfront/documentation/), and tutorials! 
