@@ -38,7 +38,7 @@ If you just want to test PHPFront or if your project is nothing more than basic,
 * Create a plain HTML page named ‘template.html’- one that contains no php tags – and put the file in this same directory.
 
 Then in your app.php:
-
+--------------
 * Include the PHPFront class.
   
   ```php
@@ -48,64 +48,44 @@ Then in your app.php:
   // Where ‘path-to-PHPFront’ is your actual path to where you stored PHPFront
   Include ‘path-to-PHPFront/PHPFront/lib/PHPFront.php’;
   ```
-----------------
 
 * PHPFront is now available to our app.php script, so we instantiate it:
-
+  ```php
   $PHPFront = new PHPFront;
-
   // The PHPFront’s __constructor accepts no arguments
-
-----------------
+  ```
 
 * Now, we hand PHPFront the template to use - our template.html page
-
+  ```php
   $PHPFront->setTemplate(‘template.html’);
 
-  If your stored template.html in a different location, your path would change.
-
-----------------
-
-  $PHPFront->setTemplate(‘path-to-template/template.html’);
-
+  // If your stored template.html in a different location, your path would change.
   // Where ‘path-to-template is your actual path to where you stored template.html
-
-
-----------------
-
+  $PHPFront->setTemplate(‘path-to-template/template.html’);
+  ```
+  
 * Now we can start assigning content to the respective elements in the template using PHPFront’s assign() function
 
   The function accepts to parameters:
-
+  ```php
     - i	$element_selector 		string
     - ii $data 					string|array
-
-----------------
-
+  
   // For document title (title)
-
   $PHPFront->assign(‘title’, ‘This is document title’);
 
-----------------
-
   // For page heading 1 (h1)
-
   $PHPFront->assign(‘h1’, ‘Hello World!’);
 
-----------------
-
   // For page paragraph (p)
-
   $PHPFront->assign(‘p’, ‘Here is my first PHPFront project’);
-
-----------------
-
+  ```
+  
 * Finally, we render our page using PHPFront’s render() function
-
+  ```php
   $PHPFront->render();
-
-----------------
-
+  ```
+  
 And that’s it! Preview your app.php in a browser and experience the PHPFront's simplicity and neatness first time on your project!
 
 ----------------
@@ -131,62 +111,42 @@ GPL-3.0 - See the LICENSE.md file for details
 ### Samrty - (adapted from smarty.net):
 
 #### The php
-
+  ```php
   include('Smarty.class.php');
 
-----------------
-
   // create object
-
   $smarty = new Smarty;
 
-----------------
-
   // assign some content. This would typically come from
-
   // a database or other source, but we'll use static
-
   // values for the purpose of this example.
-
   $smarty->assign('name', 'george smith');
-
   $smarty->assign('address', '45th & Harris');
-
-----------------
 
   // display it
   $smarty->display('index.tpl');
-
+  ```
 ----------------
   
 #### The template - before
 
+  ```markup
   \<html\>
-
   \<head\>
-
   \<title\>Info\</title\>
-
   \</head\>
-
   \<body\>
 
-  
 	\<pre\>
-  
 	  User Information:
-	
 	  Name: {$name}
-	
 	  Address: {$address}
-  
 	\</pre\>
 
-
   \</body\>
-
   \</html\>
-
+  ```
+  
 #### The template - after
 
 
