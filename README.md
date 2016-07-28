@@ -41,7 +41,7 @@ Then in your app.php:
 
 * Include the PHPFront class.
   
-  <pre>
+  <pre class="language-php">
   Include ‘PHPFront/lib/PHPFront.php’;
 
   // If you stored the PHPFront folder in a different location, your include path would change.
