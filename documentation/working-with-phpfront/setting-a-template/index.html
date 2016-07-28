@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="PHPFront">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Setting A Template | PHPFront</title>
+<base href="/documentation/working-with-phpfront/setting-a-template/">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin'%20type='text/css" media="all">
+<link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/templates/ox-harris/css/main.css">
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+  <header class="container"><div class="col-md-2 text-center">
+        <!-- -->
+        <a class="block active" href="/"><img src="/img/logoc.fw.png" alt="PHPFront logo"></a>
+        <!-- -->
+    </div>
+    
+    <nav class="col-md-8 navbar navbar-default"><div class="navbar-header">
+          <!-- -->
+          <!-- -->
+        </div>
+        <ul class="nav navbar-nav navbar-center">
+<li>
+            <a id="menu-about" data-toggle="dropdown" href="/about/"><!--<span class="glyphicon glyphicon-asterik"></span> -->About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-about">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="/about/features/">Features</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-possibilities/">The Possibilities</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/the-story/">The Story</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="/about/">About</a></li>
+            </ul>
+</li>
+          
+          <li><a href="/download/"><!--<span class="glyphicon glyphicon-cloud-download"></span> -->Download</a></li>
+          
+          <li><a href="/documentation/" class="active"><!--<span class="glyphicon glyphicon-book"></span> -->Documentation</a></li>
+          
+          <li class="dropdown">
+            <a class="dropdown-toggle" id="menu-community" data-toggle="dropdown" href="/community/"><!--<span class="glyphicon glyphicon-comment glyphicon-share-alt"></span> -->Community <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-community">
+<li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.twitter.com/PHPFront">Twitter</a></li>
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://www.facebook.com/PHPFront">Facebook</a></li>
+              <li role="presentation" class="divider">
+              <li role="presentation"><a role="menuitem" target="_blank" tabindex="-1" href="https://github.com/ox-harris/phpfront/issues">Issues</a></li>
+              <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="/community/">Community</a></li>-->
+            </ul>
+</li>
+          
+        </ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="/get-involved/"><span class="glyphicon glyphicon-log-in"></span> Get Involved</a></li>
+        </ul></nav><div class="col-md-2 text-right">
+    </div>
+    
+    <div class="contains_float">
+      <div class="col-md-2 text-right">
+          <!-- -->
+          <a class="version" target="_blank" href="https://www.github.com/ox-harris/phpfront/releases">v1.0</a>
+          <!-- -->
+      </div>
+      
+      <div class="col-md-8">
+          
+        <table class="marquee"><tr>
+<td><a target="_blank" href="/documentation/">PHPFront Online Documentation now available!</a>
+</td>
+<td><a target="_blank" href="/download/">PHPFront is available on Composer: composer require ox-harris/phpfront: ~1.0</a>
+</td>
+<td><em><a target="_blank" href="mailto:phpfront@gmail.com">Contact us</a> to place an ad here...</em>
+</td>
+          </tr></table>
+</div>
+      
+      <div class="col-md-2 text-right">
+    </div>
+    </div>
+        
+  </header><br><main class="container"><nav class="col-md-2" id="main_nav" data-spy="affix" data-offset-top="360"><br><!-- --><ul class="nav nav-pills nav-stacked well" role="tablist">
+<p>Use PHPFront at <em><strong>little</strong></em> or <em><strong>zero</strong></em> learning curve!</p>
+        <br><!--
+        <li class="active">
+          <a target="_blank" href="https://github.com/ox-harris/phpfront/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        --><li class="active">
+          <a target="_blank" href="/download/"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ox-harris/phpfront"><span class="glyphicon glyphicon-link"></span> View on GitHub</a>
+        </li>
+      </ul>
+<!-- --><br><div class="scrollspy well">
+          
+        <h4>Navigation</h4>
+        
+        <ul class="nav nav-pills" role="tablist">
+<!--  class="nav nav-pills nav-stacked"--><li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#function">Function</a>
+          	<ul class="nav nav-pills sub-nav">
+<li><a href="#usage">Usage</a></li>
+            </ul>
+</li>
+<li>
+            
+            <a href="#summary">Summary</a>
+          	</li>
+<li>
+            
+            <a href="#"></a>
+          	</li>
+<li>
+            
+            <a href="#see-also">See Also</a>
+          	</li>
+        </ul>
+</div>
+      
+    </nav><div class="col-md-8">
+      <div class="we ll">
+        <h1>
+Setting A Template
+          <br><small></small>
+        </h1>
+        
+        <ul class="breadcrumb">
+<li><a href="/" title="This is your homepage" data-placement="right auto">Home</a></li>
+<li><a title="Documentation" href="/documentation/">Documentation</a></li>
+<li><a title="Working With Phpfront" href="/documentation/working-with-phpfront/">Working With Phpfront</a></li>
+<li title="This is your current location" class="active">Setting A Template
+</li>
+</ul>
+<div id="main_content">
+<section class="contains_float">
+	<p>
+    <em>Give PHPFront a template to render</em>
+    </p>
+    
+    <p>
+    The <code>PHPFront::setTemplate()</code> function is used to assign a template to render.
+    Any valid HTML markup can serve as a template - there are no special tags needed nor any template syntax to learn. 
+    </p>
+    
+    <p class="alert alert-success" data-label="Great">
+    Given PHPFront, every HTML file is <em>plug-n-play</em>.
+    </p>
+      
+</section>
+
+
+
+<section>
+	<h2 id="function">Function
+</h2>
+  
+    <pre>
+    <code class="language-php">
+      
+      PHPFront::setTemplate($template );
+      
+    </code>
+    </pre>
+    
+    <p>
+    The <code>$template</code> parameter provides the template to use in either of two ways:<br>
+	- A path to the template file. Both relative and absolute paths are accepted,<br>
+    - A markup string that represents a valid markup document.
+    </p>
+          
+    <div class="section">
+      <h3 id="usage">Usage
+</h3>
+      
+      <pre>
+      <code class="language-php">
+        
+		// Using a relative path
+		$PHPFront-&gt;setTemplate('../../resources/template.html');
+
+		// Using an absolute path
+		$PHPFront-&gt;setTemplate('c://xamp/htdocs/app/resources/template.html');
+        
+		// This sets a remote template
+		$PHPFront-&gt;setTemplate('http://www.example.com/templates/template.html');
+
+
+		// Providing a template as markup string
+		$template = '
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+              &lt;head&gt;
+              &lt;title&gt;Sample Template&lt;/title&gt;
+              &lt;/head&gt;
+  
+          &lt;body&gt;
+          &lt;p&gt;Hello world!&lt;/p&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;';
+
+		$PHPFront-&gt;setTemplate($template);
+        
+      </code>
+      </pre>
+      
+      <p class="alert alert-warning" data-label="Notice">
+      PHPFront throws Exception when the file path could not be found or the markup string is empty.
+      </p>
+      
+      <p>
+      Once a template is set, we can render.
+      </p>
+      
+      <pre>
+      <code class="language-php">
+      
+      $PHPFront-&gt;render();
+      
+      // We can assign another template and render again with the same setup and data
+      $PHPFront-&gt;setTemplate('../../resources/template2.html');
+      $PHPFront-&gt;render();
+      
+      </code>
+      </pre>
+    
+    </div>
+      
+</section>
+
+
+
+
+<section class="contains_float">
+	<h2 id="summary">Summary
+</h2>
+	<ul>
+      <li>
+      The <code>PHPFront::setTemplate()</code> function provides a template to render.
+      <a href="#function">Recall</a>
+      </li>
+    </ul>
+    
+    <br>
+
+    <p class="alert alert-success" data-label="Success">
+    We've digested this key area of PHPFront!
+    </p>
+        
+</section>
+
+
+<section class="contains_float">
+	<p>
+    <a class="btn list-group-item" href="/documentation/working-with-phpfront/">Back to Working with PHPFront</a>
+    </p>
+</section>
+
+
+
+<section class="contains_float">
+	<h2 id="see-also">See Also
+</h2>
+	<ul>
+      <li>
+      <a href="/documentation/working-with-phpfront/including-template-parts/">Including Template Parts</a>
+      </li>
+      <li>
+      <a href="/documentation/working-with-phpfront/rendering/">Rendering</a>
+      </li>
+    </ul>
+</section>
+
+        
+        
+        <!-- PAGE CONENT ENDS HERE -->
+        
+        
+        <hr>
+<!-- DISQUS COMMENTS --><div id="disqus_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	
+	var disqus_config = function () {
+		//this.page.url = PAGE_URL;
+		//this.page.identifier = PAGE_IDENTIFIER;
+	};
+	
+	(function() {
+		var d = document, s = d.createElement("script");
+		s.src = "//phpfront.disqus.com/embed.js";
+		s.setAttribute("data-timestamp", +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+	</script>
+	
+	<noscript>
+	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+	</div>
+        <!-- END DISQUS COMMENTS -->
+        
+        <br><br><br><br>
+</div>
+          
+
+      </div>
+    </div>
+    
+    <aside class="col-md-2" id="body_aside"><br><!-- BEGIN ADS --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- PHPFront --><ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6327847773209365" data-ad-slot="6615332335"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script><!-- END ADS --></aside></main><footer><div class="contains_float container">
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">PHPFront</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/about/">Why PHPFront</a></li>
+          <li class="list-group-item"><a href="/about/features/">Features</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Documentation</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="/documentation/">Getting Started</a></li>
+          <li class="list-group-item"><a href="/documentation/working-with-phpfront/">Developer Docs</a></li>
+          <li class="list-group-item"><a href="/documentation/designing-for-phpfront/">Designer Docs</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Get Involved</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.github.com/ox-harris/phpfront">Contribute on GitHub</a></li>
+          <li class="list-group-item"><a href="https://github.com/ox-harris/phpfront/issues">Report Bugs/Issues</a></li>
+          <li class="list-group-item"><a href="/get-involved/">Support PHPFront</a></li>
+        </ul>
+</div>
+      
+      <div class="col-md-3 text-center">
+        <div class="h4">Community</div>
+        <ul class="list-group">
+<li class="list-group-item"><a href="https://www.twitter.com/PHPFront">Twitter</a></li>
+          <li class="list-group-item"><a href="https://www.facebook.com/PHPFront">Facebook</a></li>
+        </ul>
+</div>
+
+    </div>
+    
+    <div class="contains_float container">
+      <br><div class="text-center">© 2016 Ox-Harris Creative</div>
+      <div class="text-right" style="color:salmon"><em>This site was pre-rendered with PHPFront &amp; PHP • Built by <a href="https://www.twitter.com/ox_harris">@Ox-Harris</a></em></div>
+      
+      <br>
+</div>
+  </footer><script class="scripts" src="/js/jquery.min.js"></script><script class="scripts" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><script class="scripts" src="/js/prism.js"></script><script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('[title]').tooltip();
+	});
+	</script><script id="dsq-count-scr" src="//phpfront.disqus.com/count.js" async></script><!-- **************************************************************************** -->
+</body>
+</html>
