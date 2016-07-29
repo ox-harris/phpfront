@@ -25,7 +25,7 @@ Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot 
   There are two options:
 ### With Composer
   ```composer
-  composer require ox-harris/phpfront: ~1.0
+  composer require ox-harris/phpfront
   ```
 ### From Github
 
@@ -99,8 +99,9 @@ All bugs, feature requests, pull requests, feedback, etc., are welcome. [Create 
 
 # Follow Up
 https://www.twitter.com/PHPFront.
+
 Visit 
-http://www.facebook.com/OxHarrisFront
+http://www.facebook.com/PeeHPFront
 
 # Authors
   Oxford Harrison <ox_harris@yahoo.com>
