@@ -1,6 +1,6 @@
 {
     "name": "ox-harris/phpfront",
-    "description": "Template Engine for PHP - Well-Engineered for Templating. Uses no template syntaxes!",
+    "description": "Syntaxless Template Engine for PHP. Well-Engineered for Templating.",
     "keywords": ["templating","template engine","syntaxless templating","PHP","HTML"],
     "homepage": "https://ox-harris.github.io/phpfront/",
     "license": "GPL-3.0",
@@ -13,7 +13,7 @@
     "support": {
         "issues": "https://github.com/phpfront/PHPFront/issues",
         "forum": "https://www.twitter.com/PHPFront/",
-        "general": "https://www.facebook.com/OxHarrisFront/"
+        "general": "https://www.facebook.com/PeeHPFront/"
     },
     "require": {
         "php": ">=5.3"
