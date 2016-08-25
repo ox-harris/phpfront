@@ -1,0 +1,8 @@
+changed all href, scr (scripts and images), link with / 
+	-> /phpfront
+changed all http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6 
+	-> /phpfront
+changed Documenetation 
+	-> Documentation
+change <a target="_blank" href="/phpfront/download/">PHPFront is available on Composer: composer require ox-harris/phpfront</a>
+	-> <a target="_blank" href="/phpfront/download/">PHPFront is available on Composer:</a> composer require ox-harris/phpfront
