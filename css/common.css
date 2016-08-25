@@ -197,7 +197,7 @@
 	}
 }
 .marquee tr {
-	animation:marquee 45s linear infinite;
+	animation:marquee 30s linear infinite;
 }
 .marquee:hover tr {
 	-webkit-animation-play-state: paused; /* Chrome, Safari, Opera */

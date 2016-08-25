@@ -1,8 +1,0 @@
-# Required/overridden by Github
-safe: true
-lsi: false
-highlighter: pygments
-base-url: /phpfront
-baseurl: /phpfront
-
-exclude: ["README.md", "node_modules"]
