@@ -1,5 +1,4 @@
 # PHPFront
-*Well-Engineered for Templating. Uses no template syntaxes!* [ox-harris.github.io/phpfront](https://ox-harris.github.io/phpfront)
 
 -----------------------------------------------
 
@@ -11,12 +10,6 @@ It helps you dynamically render application content on templates without mixing 
   *  And on the critical side, you avoid all the security issues associated with using PHP codes on HTML templates.
 
 Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot of new possibilities!
-
-**Compare PHPFront with Smarty and other Text-based Template Engines**
-  
-  *  No template syntaxes - not even one. PHPFront is DOM-based not text-based.
-  *  Requires no proprietary syntaxes, PHP codes, or the .tpl extension on templates.
-  *  Built around familiar standards and conventions: PHP, HTML, CSS, XPATH.
 
 # Installation
 ## Requirement
@@ -59,19 +52,6 @@ Then in your app.php:
   ```php
   $PHPFront = new PHPFront;
   ```
-  
-* Now we can start assigning content to the respective elements in the template using PHPFront’s `assign()` function
-
-  ```php
-  // For document title (title)
-  $PHPFront->assign(‘title’, ‘This is document title’);
-
-  // For page heading 1 (h1)
-  $PHPFront->assign(‘h1’, ‘Hello World!’);
-
-  // For page paragraph (p)
-  $PHPFront->assign(‘p’, ‘Here is my first PHPFront project’);
-  ```
 
 * Now, we hand PHPFront the template to use - our template.html page
   ```php
@@ -81,7 +61,24 @@ Then in your app.php:
   // Where ‘path-to-template is your actual path to where you stored template.html
   $PHPFront->setTemplate(‘path-to-template/template.html’);
   ```
+    
+* Now we can start reading and writing content on respective elements in the template with CSS3 selectors
+
+  ```php
+  // For document title (title)
+  $PHPFront->find(‘title’)->html(‘This is document title’);
+
+  // For page heading 1 (h1)
+  $PHPFront->find(‘h1’)->html(‘Hello World!’);
+
+  // For page paragraph (p)
+  $PHPFront->find(‘p’)->html(‘Here is my first PHPFront project’)->addClass('rounded-corners')->css('color', 'gray');
   
+  // Load a HTML fragment into a DIV and manipulate its content
+  $PHPFront->find('#container')->load(__DIR__.'/templates/table.html')->find('tr:even')->css('background-color', 'whitesmoke')
+  ->parents('table')->attr('id', 'employee-table')->append('<tr><td>342</td><td>John Doe</td></tr>');
+  ```
+
 * Finally, we render our page using PHPFront’s render() function
   ```php
   $PHPFront->render();
@@ -92,7 +89,7 @@ And that’s it! Preview your app.php in a browser and experience the PHPFront's
 ----------------
 
 # Documentation
-https://ox-harris.github.io/phpfront/documentation/
+https://ox-harris.github.io/phpfront/documentation/ (FOR phpFront v1.0.0)
 
 # Feedback
 All bugs, feature requests, pull requests, feedback, etc., are welcome. [Create an issue](https://github.com/ox-harris/phpfront/issues).
@@ -111,158 +108,3 @@ http://www.facebook.com/PeeHPFront
 GPL-3.0 - See LICENSE
   
 
-----------------
-
-# Usage Comparison with Smarty
-
-### Samrty - (adapted from smarty.net):
-
-#### The php
-  ```php
-  include('Smarty.class.php');
-
-  // create object
-  $smarty = new Smarty;
-
-  // assign some content. This would typically come from
-  // a database or other source, but we'll use static
-  // values for the purpose of this example.
-  $smarty->assign('name', 'george smith');
-  $smarty->assign('address', '45th & Harris');
-
-  // display it
-  $smarty->display('index.tpl');
-  ```
-  
-#### The template - before
-
-  ```html
-  <html>
-  <head>
-  <title>Info</title>
-  </head>
-  <body>
-
-	<pre>
-	  User Information:
-	  Name: {$name}
-	  Address: {$address}
-	</pre>
-
-  </body>
-  </html>
-  ```
-  
-#### The template - after
-
-```html
-  <html>
-  <head>
-	<title>Info</title>
-  </head>
-  <body>
-  
-	<pre>
-	  User Information:
-	  Name: george smith
-	  Address: 45th &amp; Harris
-	</pre>
-
-  </body>
-  </html>
-  ```
-  
-### PHPFront:
-
-#### The php
-
-  ```php
-  include('PHPFront/lib/PHPFront.php');
-
-  // create object
-  $PHPFront = new PHPFront;
-
-  // assign some content. This would typically come from
-  // a database or other source, but we'll use static
-  // values for the purpose of this example.
-  $PHPFront->assign('#name::after', 'george smith');
-  $PHPFront->assign('#address::after', '45th & Harris');
-
-  // display it
-  $PHPFront->setTemplate('index.html');
-  $PHPFront->render();
-  ```
-  
-#### The template - before
-
-  ```html
-  <html>
-  <head>
-	<title>Info</title>
-  </head>
-  <body>
-  
-	<pre>
-	  User Information:
-	  <span id="name">Name: </span>
-	  <span id="address">Address: </span>
-	</pre>
-
-  </body>
-  </html>
-  ```
-  
-#### The template - after
-
-  ```html
-  <html>
-  <head>
-	<title>Info</title>
-  </head>
-  <body>
-  
-	<pre>
-	  User Information:
-	  <span id="name">Name: george smith</span>
-	  <span id="address">Address: 45th &amp; Harris</span>
-	</pre>
-
-  </body>
-  </html>
-  ```
-----------------
-  
-## The similarities
-  * Instantiating with the 'new' keyword - same.
-  * Assigning data to named elements in the markup - same.
-  * Displaying - Smarty: `display()`; PHPFront: `render()`.
-
-## The differences (lest you think they're the same all the way):
-
-Smarty
-
-  * A smarty template is not a standard HTML markup. But a mix of HTML and Smarty's own tags and syntaxes.
-  * `Smarty::assign()` assigns data to template variables, and you pick up those variables on the template to manually render or loop over.
-  * A Smarty template file has the file extension .tpl. not .html
-  * You must learn PHP, HTML and Smarty syntaxes to work with Smarty.
-
-PHPFront
-
-  * Any valid HTML markup is a template! And valid HTML markup is valid anywhere - with or without the PHPFront Engine!
-  * `PHPFront::assign()` assigns data directly to elements in a template. No extra overhead of editing the template using template syntaxes to render or loop over.
-  * Template file extension is rightly .html
-  * PHPFront requires no other language. (You've learned PHP and HTML already! And that's all! That's the standard.)
-
-  Furthermore, if you know CSS, you can even target template elements by
-
-  	id: `$PHPFront->assign('#element', $data)`,
-
-  	Class: (`$PHPFront->assign('.element', $data)`,
-
-  	Attribute: `$PHPFront->assign('element[attr]', $data)`.
-
-  And if you're a pro, find anything on the UI with XPATH query:
-
-  	XPATH: `$PHPFront->assign('xpath:parent/child', $data)`.
-
-You should by now see the possibilities! See the [official documentation](https://ox-harris.github.io/phpfront/documentation/), and tutorials! 
