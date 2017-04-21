@@ -1,15 +1,8 @@
 # PHPFront
 
------------------------------------------------
+PHPFront will help you read/write content on HTML templates from within your PHP application, read/write on attributes, traverse up/down the full document, manipulate - create, repeat, import, relocate, replace, remove - elements dynamically, produce a clean HTML output that represents your entire application. This is server-side rendering.
 
-PHPFront is a fully-featured template engine for PHP.
-It facilitates the globally-held standard of code separation in application building.
-It helps you dynamically render application content on templates without mixing application codes (PHP) with presentation codes (HTML).
-
-  *  This code separation brings about cleaner and more maintainable code - the same reason why you do not mix CSS styles with HTML.
-  *  And on the critical side, you avoid all the security issues associated with using PHP codes on HTML templates.
-
-Furthermore, PHPFront brings all the ease and fun to your code, and a whole lot of new possibilities!
+It implements the JQuery API with its powerful CSS3 selectors and chainable methods. It is well-tested and greatly optimized for use in websites and other PHP-based applications; built with love to bring all the ease and fun to your code, and a whole lot of new possibilities!
 
 # Installation
 ## Requirement
