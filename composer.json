@@ -22,7 +22,7 @@
         "classmap": [
             "lib/PHPFront.php",
             "lib/PHPFrontDom.php",
-            "lib/PHPFrontElement.php"
+            "lib/PHPFrontElement.php",
             "lib/PHPFrontNodeList.php"
         ]
     }
