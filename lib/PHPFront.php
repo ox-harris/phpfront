@@ -25,36 +25,6 @@
  * @link		https://www.facebook.com/PHPFront/
  * @uses		PHPFrontNodelist	to retrieve elements of a Nodelist or auto-generated elements in a particular order.
  * @see			PHPFrontNodelist
- */	 
-
-
-
-/**
- * Try loading the PHPFrontDom class.
- * If found, then there may be some global autoloader like Composer.
- * If not, we manually include the core lib classess.
- */
-if (!class_exists('PHPFrontDom'))
-{
-     require_once dirname(__FILE__) . '/PHPFrontDom.php';
-     require_once dirname(__FILE__) . '/PHPFrontElement.php';
-     require_once dirname(__FILE__) . '/PHPFrontNodeList.php';
-}
-
-
-
-
-
-
-
-/** 
- * The PHPFront Machine.
- * Builds up data stack with every data associated with an element,
- * accepts a HTML template and renders data into it.
- * Built upon the PHP DOMDocument.
- *
- * @todo	Some regex operations within getElementsBySelector().
- *			Currently, they intentional throw Exception as reminders.
  */
 Class PHPFront
 {
